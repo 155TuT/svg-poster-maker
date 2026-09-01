@@ -22,37 +22,37 @@
 首次使用：
 
 ```powershell
-npm.cmd --prefix poster\java install
+npm.cmd --prefix svg-poster-maker\java install
 ```
 
 同步素材并导出：
 
 ```powershell
-npm.cmd --prefix poster\java run render
+npm.cmd --prefix svg-poster-maker\java run render
 ```
 
 验证二维码：
 
 ```powershell
-npm.cmd --prefix poster\java run verify:qr
+npm.cmd --prefix svg-poster-maker\java run verify:qr
 ```
 
 完整重建并验证：
 
 ```powershell
-npm.cmd --prefix poster\java run check
+npm.cmd --prefix svg-poster-maker\java run check
 ```
 
 如果只需重新生成透明底二维码：
 
 ```powershell
-npm.cmd --prefix poster\java run process:qr
+npm.cmd --prefix svg-poster-maker\java run process:qr
 ```
 
 重新生成透明底白色化工学院标识：
 
 ```powershell
-npm.cmd --prefix poster\java run process:logo
+npm.cmd --prefix svg-poster-maker\java run process:logo
 ```
 
 ## 版式约束

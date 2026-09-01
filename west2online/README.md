@@ -40,22 +40,22 @@
 
 ## 渲染
 
-首次使用时，在仓库根目录安装 `poster/` 自己的依赖：
+首次使用时，在仓库根目录安装 `svg-poster-maker/` 自己的依赖：
 
 ```powershell
-npm --prefix poster install
+npm --prefix svg-poster-maker install
 ```
 
 之后每次修改 `west2-online-a4.svg`，运行：
 
 ```powershell
-npm --prefix poster run render
+npm --prefix svg-poster-maker run render
 ```
 
 安装依赖后，也可以直接运行同一个 `.mjs`：
 
 ```powershell
-node poster\style-embedded-poster.mjs
+node svg-poster-maker\style-embedded-poster.mjs
 ```
 
 脚本不依赖 Codex 缓存。它只会同步外部背景与二维码，再同时生成 A4 与 A3 的普通版及 3 mm 出血版 PNG/PDF；SVG 内现有字体样式和排版节点会原样保留。所有 PNG 均写入 300 dpi 元数据。出血版只在裁切线外镜像延展边缘背景，不会缩放或移动裁切线内的版式；PDF 同时写入对应 A4/A3 TrimBox 和整页 BleedBox。正式交付印刷时优先使用文件名带 `-bleed` 的 PDF，普通版继续用于屏幕预览或无需裁切的输出。

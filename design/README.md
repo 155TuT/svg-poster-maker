@@ -9,13 +9,13 @@
 3. 脚本同步本地图片、处理导出字形，并生成正式 PNG 与 PDF。
 
 ```powershell
-npm.cmd --prefix poster\design run process
+npm.cmd --prefix svg-poster-maker\design run process
 ```
 
 首次运行前安装依赖：
 
 ```powershell
-npm.cmd --prefix poster\design install
+npm.cmd --prefix svg-poster-maker\design install
 ```
 
 ## 输出文件
