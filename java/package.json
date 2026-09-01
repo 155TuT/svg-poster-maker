@@ -1,0 +1,18 @@
+{
+  "name": "west2-online-java-poster",
+  "private": true,
+  "scripts": {
+    "process:qr": "node process-qrcode.mjs",
+    "process:logo": "node process-white-logo.mjs",
+    "render": "node render-poster.mjs",
+    "verify:qr": "node verify-qrcode.mjs",
+    "check": "npm run render && npm run verify:qr"
+  },
+  "dependencies": {
+    "pdf-lib": "1.17.1",
+    "sharp": "0.35.3"
+  },
+  "devDependencies": {
+    "@zxing/library": "0.21.3"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "west2-online-poster",
+  "private": true,
+  "scripts": {
+    "render": "node style-embedded-poster.mjs",
+    "verify:qr": "node verify-qrcode.mjs"
+  },
+  "dependencies": {
+    "pdf-lib": "1.17.1",
+    "sharp": "0.35.3"
+  },
+  "devDependencies": {
+    "@zxing/library": "0.21.3"
+  }
+}

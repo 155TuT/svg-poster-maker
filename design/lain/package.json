@@ -1,0 +1,16 @@
+{
+  "name": "west2-online-design-lain-ascii",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node generate-ascii.mjs",
+    "generate:fine": "node generate-ascii.mjs --columns 180 --png-scale 2 --svg output/svg/Lain-ascii-fine.svg --png output/png/Lain-ascii-fine.png",
+    "verify": "node verify-ascii.mjs",
+    "verify:fine": "node verify-ascii.mjs --svg output/svg/Lain-ascii-fine.svg --png output/png/Lain-ascii-fine.png",
+    "check": "npm run generate && npm run verify",
+    "check:fine": "npm run generate:fine && npm run verify:fine"
+  },
+  "dependencies": {
+    "sharp": "0.35.3"
+  }
+}
