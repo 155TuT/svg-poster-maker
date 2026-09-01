@@ -15,10 +15,12 @@
 - `output/pdf/west2-online-a3.pdf`：A3 单页 PDF。
 - `output/png/west2-online-a3-bleed.png`：A3 四边各 3 mm 出血的 300 dpi 印刷 PNG，`3579 × 5031 px`。
 - `output/pdf/west2-online-a3-bleed.pdf`：A3 四边各 3 mm 出血的印刷 PDF，含标准 A3 TrimBox 与整页 BleedBox。
-- `ai-hero-background.png`：当前微调背景图。
-- `qrcode.jpg`：群聊二维码源图；文件扩展名为 JPG，但实际编码为 PNG。
-- `qrcode-west2-styled.png`：人工维护的透明底二维码；保持原二维码码点位置，并在原中央图形范围内加入西二徽标。
-- `style-embedded-poster.mjs`：以当前嵌入 SVG 为基础，把 `ai-hero-background.png` 与透明二维码原样更新为 Base64，再导出 PNG/PDF；不会改写字体、文案、位置、形变，也不会重绘资源。
+- `bg/ai-hero-background.png`：当前微调背景图；生成提示词保存在同目录的 `ai-hero-background-prompt.md`。
+- `logo/`：西二在线 Logo 与头像等品牌标识源文件；海报左上角使用 `west2-online-avatar.png`。
+- `qrcode/qrcode.jpg`：群聊二维码源图；文件扩展名为 JPG，但实际编码为 PNG。
+- `qrcode/qrcode-west2-styled.png`：人工维护的透明底二维码；保持原二维码码点位置，并在原中央图形范围内加入西二徽标。
+- `qrcode/flatten-qrcode-color.mjs`：二维码纯色处理脚本，输入与备份文件均位于 `qrcode/`。
+- `style-embedded-poster.mjs`：以当前嵌入 SVG 为基础，把背景、左上角头像与二维码从 `bg/`、`logo/`、`qrcode/` 原样更新为 Base64，并在图像节点记录 `data-source-path`，再导出 PNG/PDF；不会改写字体、文案、位置、形变，也不会重绘资源。
 - 当前字体分工：中文使用 `Alimama ShuHeiTi` Bold，并以 `Noto Sans CJK SC` 等字体回退；英文使用 `Inter`；数字使用 `IBM Plex Sans`。
 
 ## 图层顺序
@@ -62,7 +64,7 @@ node poster\style-embedded-poster.mjs
 
 四边出血由 `style-embedded-poster.mjs` 顶部的 `bleedMillimeters` 控制，默认值为 `3`；如果打印店明确要求 5 mm，可将它改为 `5` 后重新运行导出。命令结束时会打印输入/输出绝对路径、生成时间、出血像素与 PDF 页面框，以及 SVG/各尺寸 PNG 的 SHA-256；如果哈希或输出时间没有变化，应先核对编辑的是否为 `poster/west2-online-a4.svg`，以及查看的是否为 `poster/output/png/`、`poster/output/pdf/` 中对应尺寸的文件。
 
-二维码改色后可运行 `npm run verify:qr`；它会同时解码 `qrcode-west2-styled.png` 和导出 PNG 中经过斜切的二维码，并确认两者内容一致。
+二维码改色后可运行 `npm run verify:qr`；它会同时解码 `qrcode/qrcode-west2-styled.png` 和导出 PNG 中经过斜切的二维码，并确认两者内容一致。
 
 ## 悬浮组件角度、形变与位置
 

@@ -2,10 +2,10 @@
   "name": "west2-online-java-poster",
   "private": true,
   "scripts": {
-    "process:qr": "node process-qrcode.mjs",
+    "process:qr": "node qrcode/process-qrcode.mjs",
     "process:logo": "node process-white-logo.mjs",
     "render": "node render-poster.mjs",
-    "verify:qr": "node verify-qrcode.mjs",
+    "verify:qr": "node qrcode/verify-qrcode.mjs",
     "check": "npm run render && npm run verify:qr"
   },
   "dependencies": {

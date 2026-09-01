@@ -8,8 +8,12 @@ import sharp from "sharp";
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 
 const svgPath = path.join(scriptDir, "west2-online-a4.svg");
-const backgroundPath = path.join(scriptDir, "ai-hero-background.png");
-const styledQrPath = path.join(scriptDir, "qrcode-west2-styled.png");
+const backgroundSourcePath = "bg/ai-hero-background.png";
+const avatarSourcePath = "logo/west2-online-avatar.png";
+const styledQrSourcePath = "qrcode/qrcode-west2-styled.png";
+const backgroundPath = path.join(scriptDir, backgroundSourcePath);
+const avatarPath = path.join(scriptDir, avatarSourcePath);
+const styledQrPath = path.join(scriptDir, styledQrSourcePath);
 const pngDir = path.join(scriptDir, "output", "png");
 const pdfDir = path.join(scriptDir, "output", "pdf");
 const exportDpi = 300;
@@ -49,7 +53,7 @@ async function createPdf(png, pagePoints, trimBox) {
   return doc.save();
 }
 
-function replaceImageInGroup(source, groupId, imageId, dataUri) {
+function replaceImageInGroup(source, groupId, imageId, sourcePath, dataUri) {
   const groupStart = source.indexOf(`<g id="${groupId}"`);
   if (groupStart === -1) throw new Error(`Missing group: ${groupId}`);
   const imageStart = source.indexOf("<image", groupStart);
@@ -64,11 +68,17 @@ function replaceImageInGroup(source, groupId, imageId, dataUri) {
   }
   if (!/href="[^"]*"/.test(tag)) throw new Error(`Missing href in image: ${imageId}`);
   tag = tag.replace(/href="[^"]*"/, `href="${dataUri}"`);
+  if (/\sdata-source-path="[^"]*"/.test(tag)) {
+    tag = tag.replace(/\sdata-source-path="[^"]*"/, ` data-source-path="${sourcePath}"`);
+  } else {
+    tag = tag.replace("<image", `<image data-source-path="${sourcePath}"`);
+  }
   return source.slice(0, imageStart) + tag + source.slice(imageEnd + 2);
 }
 
 // External raster assets are authoritative; SVG typography and layout remain untouched.
 const backgroundPng = fs.readFileSync(backgroundPath);
+const avatarPng = fs.readFileSync(avatarPath);
 // The manually refined transparent QR is authoritative; never regenerate or flatten it here.
 const qrPng = fs.readFileSync(styledQrPath);
 
@@ -78,12 +88,21 @@ svg = replaceImageInGroup(
   svg,
   "full-bleed-background",
   "full-bleed-background-image",
+  backgroundSourcePath,
   `data:image/png;base64,${backgroundPng.toString("base64")}`,
+);
+svg = replaceImageInGroup(
+  svg,
+  "identity-block",
+  "identity-avatar",
+  avatarSourcePath,
+  `data:image/png;base64,${avatarPng.toString("base64")}`,
 );
 svg = replaceImageInGroup(
   svg,
   "contact-qr",
   "group-qrcode",
+  styledQrSourcePath,
   `data:image/png;base64,${qrPng.toString("base64")}`,
 );
 if (svg !== sourceSvg) fs.writeFileSync(svgPath, svg);
@@ -180,6 +199,7 @@ console.log(JSON.stringify({
   generatedAt: new Date().toISOString(),
   svgPath,
   backgroundPath,
+  avatarPath,
   styledQrPath,
   exports,
   svgSha256: createHash("sha256").update(svg).digest("hex"),

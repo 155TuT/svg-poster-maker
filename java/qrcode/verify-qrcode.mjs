@@ -17,7 +17,7 @@ const {
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const styledQrPath = path.join(scriptDir, "qrcode-java-styled.png");
-const posterPath = path.join(scriptDir, "output", "png", "java-recruitment.png");
+const posterPath = path.join(scriptDir, "..", "output", "png", "java-recruitment.png");
 const qrPlacement = { x: 82, y: 992, size: 376 };
 
 async function toLuminance(filePath, extract) {

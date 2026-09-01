@@ -3,16 +3,16 @@
 ## 文件
 
 - `poster_without_qrcode.png`：不含二维码的完整海报底图，保持原样。
-- `raw_qrcode.jpg`：QQ 群二维码源图；扩展名为 JPG，实际编码为 PNG。
-- `process-qrcode.mjs`：自动识别并裁切二维码矩阵，移除深色卡片背景，将码点改为海报主蓝，并保留白色中心 QQ 标识。
-- `qrcode-java-styled.png`：处理后的透明底二维码，由脚本生成。
+- `qrcode/raw_qrcode.jpg`：QQ 群二维码源图；扩展名为 JPG，实际编码为 PNG。
+- `qrcode/process-qrcode.mjs`：自动识别并裁切二维码矩阵，移除深色卡片背景，将码点改为海报主蓝，并保留白色中心 QQ 标识。
+- `qrcode/qrcode-java-styled.png`：处理后的透明底二维码，由脚本生成。
 - `chemical-engineering-logo-source.png`：化工学院标识原图备份，保持原样。
 - `process-white-logo.mjs`：移除标识近白背景并把所有可见前景统一为纯白，保留透明抗锯齿。
 - `chemical-engineering-logo-white.png`：透明底白色标识，由脚本生成。
 - `output/png/chemical-engineering-logo-white-preview.png`：仅用于检查白色标识轮廓的深色底预览图。
-- `java-recruitment.svg`：嵌入底图和二维码的自包含 SVG，由脚本生成。
+- `java-recruitment.svg`：嵌入底图和二维码的自包含 SVG，由脚本生成；图像节点通过 `data-source-path` 记录对应资源路径。
 - `render-poster.mjs`：同步二维码与 SVG，并导出 PNG/PDF。
-- `verify-qrcode.mjs`：分别解码处理后的二维码和导出海报中的二维码，确认内容一致。
+- `qrcode/verify-qrcode.mjs`：分别解码处理后的二维码和导出海报中的二维码，确认内容一致。
 - `output/png/java-recruitment-preview.png`：`1024 x 1536 px` 屏幕预览图。
 - `output/png/java-recruitment.png`：`2480 x 3720 px`、300 dpi PNG，对应 `210 x 315 mm` 的 2:3 版式。
 - `output/pdf/java-recruitment.pdf`：单页 `210 x 315 mm` PDF。

@@ -4,10 +4,12 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { PDFDocument } from "pdf-lib";
 import sharp from "sharp";
-import { processQrCode, styledQrPath } from "./process-qrcode.mjs";
+import { processQrCode, styledQrPath } from "./qrcode/process-qrcode.mjs";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
-const backgroundPath = path.join(scriptDir, "poster_without_qrcode.png");
+const backgroundSourcePath = "poster_without_qrcode.png";
+const styledQrSourcePath = "qrcode/qrcode-java-styled.png";
+const backgroundPath = path.join(scriptDir, backgroundSourcePath);
 const svgPath = path.join(scriptDir, "java-recruitment.svg");
 const previewPath = path.join(scriptDir, "output", "png", "java-recruitment-preview.png");
 const pngPath = path.join(scriptDir, "output", "png", "java-recruitment.png");
@@ -42,12 +44,12 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   <title>西二在线 Java 组纳新海报</title>
   <desc>自包含的海报底图与经过裁切、改色的 QQ 群二维码</desc>
   <g id="full-bleed-background">
-    <image id="full-bleed-background-image" x="0" y="0"
+    <image data-source-path="${backgroundSourcePath}" id="full-bleed-background-image" x="0" y="0"
       width="${canvas.width}" height="${canvas.height}" preserveAspectRatio="none"
       href="${imageDataUri(backgroundPath, "image/png")}" />
   </g>
   <g id="contact-qr">
-    <image id="java-group-qrcode" x="${qrPlacement.x}" y="${qrPlacement.y}"
+    <image data-source-path="${styledQrSourcePath}" id="java-group-qrcode" x="${qrPlacement.x}" y="${qrPlacement.y}"
       width="${qrPlacement.size}" height="${qrPlacement.size}" preserveAspectRatio="xMidYMid meet"
       href="${imageDataUri(styledQrPath, "image/png")}" />
   </g>
