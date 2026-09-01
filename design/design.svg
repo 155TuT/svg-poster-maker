@@ -67,10 +67,10 @@
 
     <g id="lain-hero-artwork">
       <rect id="lain-portrait-ghost"
-        x="98" y="282" width="400" height="560"
+        x="94" y="282" width="400" height="560"
         fill="url(#lain-portrait-pattern)" fill-opacity="0.16" />
       <rect id="lain-ascii-foreground"
-        x="98" y="282" width="400" height="560"
+        x="94" y="282" width="400" height="560"
         fill="url(#lain-ascii-pattern)" />
     </g>
 
