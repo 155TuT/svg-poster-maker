@@ -1,0 +1,12 @@
+{
+  "name": "west2-online-title-with-win95-paint",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node render-win95-paint.mjs",
+    "check": "node render-win95-paint.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.3"
+  }
+}

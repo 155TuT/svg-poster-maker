@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+  width="1373" height="924" viewBox="0 0 936.1363636363636 630" fill="none"
+  role="img" aria-labelledby="paint-title paint-description">
+  <title id="paint-title">Windows 95 Paint interface</title>
+  <desc id="paint-description">A vector recreation of the classic Windows 95 Paint window with toolbox, blank canvas, palette, and status bar.</desc>
+
+  <defs>
+    <style><![CDATA[
+      .ui-text {
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        fill: #000000;
+      }
+      .menu-text {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        fill: #000000;
+      }
+      .title-text {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        fill: #FFFFFF;
+      }
+      .pixel {
+        shape-rendering: crispEdges;
+        stroke-linecap: square;
+        stroke-linejoin: miter;
+      }
+      .icon-stroke {
+        stroke: #202020;
+        stroke-width: 2;
+        stroke-linecap: square;
+        stroke-linejoin: miter;
+      }
+    ]]></style>
+
+    <g id="tool-button">
+      <rect width="38" height="38" fill="#C0C0C0" />
+      <path d="M0 38V0H38" stroke="#FFFFFF" stroke-width="2" />
+      <path d="M2 38H38V2" stroke="#000000" stroke-width="2" />
+      <path d="M3 35H35V3" stroke="#808080" />
+    </g>
+    <g id="tool-button-pressed">
+      <rect width="38" height="38" fill="#B4B4B4" />
+      <path d="M0 38V0H38" stroke="#000000" stroke-width="2" />
+      <path d="M2 36H36V2" stroke="#FFFFFF" />
+      <path d="M3 35V3H35" stroke="#808080" />
+    </g>
+    <g id="palette-swatch-button">
+      <rect width="26" height="27" fill="#C0C0C0" />
+      <path d="M0 27V0H26" stroke="#FFFFFF" stroke-width="2" />
+      <path d="M2 27H26V2" stroke="#000000" stroke-width="2" />
+      <path d="M3 24H23V3" stroke="#808080" />
+    </g>
+    <pattern id="scroll-track-pattern" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#D4D4D4" />
+      <rect width="2" height="2" fill="#C0C0C0" />
+      <rect x="2" y="2" width="2" height="2" fill="#C0C0C0" />
+    </pattern>
+    <pattern id="selection-dots" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="2" height="2" fill="#202020" />
+    </pattern>
+  </defs>
+
+  <g id="win95-paint-window" class="pixel">
+    <rect id="window-shadow" x="14" y="14" width="916.1363636363636" height="610" fill="#000000" />
+    <rect id="window-shell" x="10" y="10" width="916.1363636363636" height="610" fill="#C0C0C0" />
+    <path d="M10 620V10H926.1363636363636" stroke="#FFFFFF" stroke-width="3" />
+    <path d="M12 620H926.1363636363636V12" stroke="#808080" stroke-width="3" />
+    <path d="M14 618H924.1363636363636V14" stroke="#000000" stroke-width="2" />
+
+    <g id="paint-title-bar">
+      <rect x="17" y="17" width="902.1363636363636" height="29" fill="#000080" />
+      <g id="paint-app-icon" transform="translate(22 22)">
+        <rect width="19" height="19" fill="#FFFFFF" stroke="#000000" />
+        <path d="M3 14C3 7 7 3 13 3C17 3 18 6 16 9C15 11 12 10 11 12C10 15 7 17 3 14Z" fill="#FFFF00" stroke="#000000" />
+        <circle cx="7" cy="7" r="2" fill="#FF0000" />
+        <circle cx="12" cy="6" r="2" fill="#0000FF" />
+        <path d="M2 17L15 4" stroke="#008080" stroke-width="3" />
+      </g>
+      <text x="47" y="38" class="title-text">West2-Online - Paint</text>
+
+      <g id="window-controls">
+        <g id="minimize-button">
+          <rect x="839.1363636363636" y="21" width="22" height="21" fill="#C0C0C0" />
+          <path d="M839.1363636363636 42V21H861.1363636363636" stroke="#FFFFFF" stroke-width="2" />
+          <path d="M841.1363636363636 42H861.1363636363636V23" stroke="#000000" stroke-width="2" />
+          <path d="M846.1363636363636 36H854.1363636363636" stroke="#000000" stroke-width="2" />
+        </g>
+        <g id="maximize-button">
+          <rect x="864.1363636363636" y="21" width="22" height="21" fill="#C0C0C0" />
+          <path d="M864.1363636363636 42V21H886.1363636363636" stroke="#FFFFFF" stroke-width="2" />
+          <path d="M866.1363636363636 42H886.1363636363636V23" stroke="#000000" stroke-width="2" />
+          <rect x="870.1363636363636" y="26" width="10" height="9" stroke="#000000" stroke-width="2" />
+        </g>
+        <g id="close-button">
+          <rect x="889.1363636363636" y="21" width="22" height="21" fill="#C0C0C0" />
+          <path d="M889.1363636363636 42V21H911.1363636363636" stroke="#FFFFFF" stroke-width="2" />
+          <path d="M891.1363636363636 42H911.1363636363636V23" stroke="#000000" stroke-width="2" />
+          <path d="M896.1363636363636 27L905.1363636363636 36M905.1363636363636 27L896.1363636363636 36" stroke="#000000" stroke-width="2" />
+        </g>
+      </g>
+    </g>
+
+    <g id="paint-menu-bar">
+      <text x="22" y="69" class="menu-text"><tspan text-decoration="underline">F</tspan>ile</text>
+      <text x="58" y="69" class="menu-text"><tspan text-decoration="underline">E</tspan>dit</text>
+      <text x="94" y="69" class="menu-text"><tspan text-decoration="underline">V</tspan>iew</text>
+      <text x="136" y="69" class="menu-text"><tspan text-decoration="underline">I</tspan>mage</text>
+      <text x="189" y="69" class="menu-text"><tspan text-decoration="underline">O</tspan>ptions</text>
+      <text x="252" y="69" class="menu-text"><tspan text-decoration="underline">H</tspan>elp</text>
+      <path d="M17 78H919.1363636363636" stroke="#808080" />
+      <path d="M17 79H919.1363636363636" stroke="#FFFFFF" />
+    </g>
+
+    <g id="paint-workspace">
+      <g id="paint-toolbox">
+        <rect x="20" y="84" width="84" height="454" fill="#C0C0C0" />
+        <path d="M20 538V84H104" stroke="#808080" stroke-width="2" />
+        <path d="M22 536H104V86" stroke="#FFFFFF" />
+
+        <g id="free-select-tool" transform="translate(23 87)">
+          <use href="#tool-button" />
+          <path d="M8 9L13 6L18 8L23 6L29 10L27 15L30 20L25 24L27 30L19 28L14 31L10 26L6 23L9 17Z" fill="none" stroke="#202020" stroke-width="2" stroke-dasharray="2 2" />
+        </g>
+        <g id="select-tool" transform="translate(63 87)">
+          <use href="#tool-button" />
+          <rect x="8" y="9" width="22" height="18" fill="none" stroke="#202020" stroke-width="2" stroke-dasharray="3 2" />
+        </g>
+
+        <g id="eraser-tool" transform="translate(23 127)">
+          <use href="#tool-button" />
+          <path d="M9 25L18 11L29 14L21 28H11Z" fill="#FFFF66" class="icon-stroke" />
+          <path d="M11 25H21" stroke="#808080" stroke-width="2" />
+        </g>
+        <g id="fill-tool" transform="translate(63 127)">
+          <use href="#tool-button" />
+          <path d="M11 11L26 23L19 30L6 17Z" fill="#C0C0C0" class="icon-stroke" />
+          <path d="M21 21L30 19L32 28L25 32L20 28Z" fill="#00BFC0" stroke="#202020" />
+          <path d="M9 8L23 22" stroke="#FFFFFF" stroke-width="2" />
+        </g>
+
+        <g id="eyedropper-tool" transform="translate(23 167)">
+          <use href="#tool-button" />
+          <path d="M10 27L26 11L30 15L14 31H8Z" fill="#404040" class="icon-stroke" />
+          <path d="M22 9L31 18" stroke="#000000" stroke-width="4" />
+          <path d="M8 31H14" stroke="#00FFFF" stroke-width="2" />
+        </g>
+        <g id="magnifier-tool" transform="translate(63 167)">
+          <use href="#tool-button" />
+          <circle cx="17" cy="16" r="10" fill="#DCEBFF" class="icon-stroke" />
+          <path d="M24 24L31 31" stroke="#000080" stroke-width="4" />
+        </g>
+
+        <g id="pencil-tool" transform="translate(23 207)">
+          <use href="#tool-button-pressed" />
+          <path d="M10 30L14 20L27 7L31 11L18 24Z" fill="#FFFF80" class="icon-stroke" />
+          <path d="M10 30L12 23L17 28Z" fill="#202020" />
+        </g>
+        <g id="brush-tool" transform="translate(63 207)">
+          <use href="#tool-button" />
+          <path d="M18 8H23L24 21H16Z" fill="#FFFF66" class="icon-stroke" />
+          <path d="M15 21H25L27 30H13Z" fill="#E8E8D0" class="icon-stroke" />
+          <path d="M18 8L20 4L22 8" stroke="#000000" stroke-width="2" />
+        </g>
+
+        <g id="airbrush-tool" transform="translate(23 247)">
+          <use href="#tool-button" />
+          <path d="M9 13H18L28 20V28H19L14 22H9Z" fill="#0000A0" class="icon-stroke" />
+          <circle cx="8" cy="10" r="1" fill="#000080" />
+          <circle cx="12" cy="8" r="1" fill="#000080" />
+          <circle cx="6" cy="15" r="1" fill="#000080" />
+        </g>
+        <g id="text-tool" transform="translate(63 247)">
+          <use href="#tool-button" />
+          <path d="M9 29L18 8H22L30 29M13 21H26" fill="none" stroke="#000000" stroke-width="3" />
+        </g>
+
+        <g id="line-tool" transform="translate(23 287)">
+          <use href="#tool-button" />
+          <path d="M8 29L30 8" stroke="#808080" stroke-width="2" />
+        </g>
+        <g id="curve-tool" transform="translate(63 287)">
+          <use href="#tool-button" />
+          <path d="M18 7C31 13 7 20 20 31" fill="none" stroke="#202020" stroke-width="3" />
+        </g>
+
+        <g id="rectangle-tool" transform="translate(23 327)">
+          <use href="#tool-button" />
+          <rect x="8" y="10" width="22" height="18" fill="none" class="icon-stroke" />
+        </g>
+        <g id="polygon-tool" transform="translate(63 327)">
+          <use href="#tool-button" />
+          <path d="M8 28L13 11H30L24 18L30 28Z" fill="none" class="icon-stroke" />
+        </g>
+
+        <g id="ellipse-tool" transform="translate(23 367)">
+          <use href="#tool-button" />
+          <ellipse cx="19" cy="19" rx="12" ry="9" fill="none" class="icon-stroke" />
+        </g>
+        <g id="rounded-rectangle-tool" transform="translate(63 367)">
+          <use href="#tool-button" />
+          <rect x="7" y="11" width="24" height="17" rx="6" fill="none" class="icon-stroke" />
+        </g>
+
+        <g id="tool-options-panel">
+          <rect x="27" y="414" width="70" height="112" fill="#B5B5B5" />
+          <path d="M27 526V414H97" stroke="#808080" stroke-width="2" />
+          <path d="M29 524H95V416" stroke="#FFFFFF" />
+        </g>
+      </g>
+
+      <g id="paint-canvas-frame">
+        <rect x="112" y="84" width="802.1363636363636" height="454" fill="#C0C0C0" />
+        <path d="M112 538V84H914.1363636363636" stroke="#808080" stroke-width="2" />
+        <path d="M114 536H914.1363636363636V86" stroke="#FFFFFF" />
+        <rect x="118" y="90" width="764.1363636363636" height="414" fill="#FFFFFF" stroke="#000000" stroke-width="2" />
+        <rect id="paint-canvas" x="120" y="92" width="760.1363636363636" height="410" fill="#FFFFFF" />
+
+        <g id="canvas-vertical-scrollbar">
+          <rect x="884.1363636363636" y="90" width="24" height="414" fill="url(#scroll-track-pattern)" />
+          <path d="M884.1363636363636 504V90H908.1363636363636" stroke="#808080" stroke-width="2" />
+          <path d="M886.1363636363636 502H906.1363636363636V92" stroke="#FFFFFF" />
+          <g id="canvas-scroll-up">
+            <rect x="884.1363636363636" y="90" width="24" height="24" fill="#C0C0C0" />
+            <path d="M884.1363636363636 114V90H908.1363636363636" stroke="#FFFFFF" stroke-width="2" />
+            <path d="M886.1363636363636 114H908.1363636363636V92" stroke="#000000" stroke-width="2" />
+            <path d="M890.1363636363636 106L896.1363636363636 97L903.1363636363636 106Z" fill="#000000" stroke-width="2" />
+          </g>
+          <g id="canvas-vertical-thumb">
+            <rect x="886.1363636363636" y="116" width="20" height="142" fill="#C0C0C0" />
+            <path d="M886.1363636363636 258V116H906.1363636363636" stroke="#FFFFFF" stroke-width="2" />
+            <path d="M888.1363636363636 258H906.1363636363636V118" stroke="#000000" stroke-width="2" />
+            <path d="M889.1363636363636 255H903.1363636363636V119" stroke="#808080" />
+          </g>
+          <g id="canvas-scroll-down">
+            <rect x="884.1363636363636" y="480" width="24" height="24" fill="#C0C0C0" />
+            <path d="M884.1363636363636 504V480H908.1363636363636" stroke="#FFFFFF" stroke-width="2" />
+            <path d="M886.1363636363636 504H908.1363636363636V482" stroke="#000000" stroke-width="2" />
+            <path d="M890.1363636363636 488H903.1363636363636L896.1363636363636 497Z" fill="#000000" stroke-width="2" />
+          </g>
+        </g>
+
+        <g id="canvas-horizontal-scrollbar">
+          <rect x="118" y="506" width="790.1363636363636" height="25" fill="url(#scroll-track-pattern)" />
+          <path d="M118 531V506H908.1363636363636" stroke="#808080" stroke-width="2" />
+          <path d="M120 529H906.1363636363636V508" stroke="#FFFFFF" />
+          <g id="canvas-scroll-left">
+            <rect x="118" y="506" width="24" height="25" fill="#C0C0C0" />
+            <path d="M118 531V506H142" stroke="#FFFFFF" stroke-width="2" />
+            <path d="M120 531H142V508" stroke="#000000" stroke-width="2" />
+            <path d="M135 512L126 518L135 525Z" fill="#000000" stroke-width="2" />
+          </g>
+          <g id="canvas-horizontal-thumb">
+            <rect x="144" y="508" width="300" height="21" fill="#C0C0C0" />
+            <path d="M144 529V508H444" stroke="#FFFFFF" stroke-width="2" />
+            <path d="M146 529H444V510" stroke="#000000" stroke-width="2" />
+            <path d="M147 526H441V511" stroke="#808080" />
+          </g>
+          <g id="canvas-scroll-right">
+            <rect x="860.1363636363636" y="506" width="24" height="25" fill="#C0C0C0" />
+            <path d="M860.1363636363636 531V506H884.1363636363636" stroke="#FFFFFF" stroke-width="2" />
+            <path d="M862.1363636363636 531H884.1363636363636V508" stroke="#000000" stroke-width="2" />
+            <path d="M867.1363636363636 512L876.1363636363636 518L867.1363636363636 525Z" fill="#000000" stroke-width="2" />
+          </g>
+          <rect x="884.1363636363636" y="506" width="24" height="25" fill="#C0C0C0" />
+        </g>
+      </g>
+    </g>
+
+    <g id="paint-color-palette">
+      <rect x="20" y="546" width="894.1363636363636" height="66" fill="#C0C0C0" />
+      <path d="M20 612V546H914.1363636363636" stroke="#808080" stroke-width="2" />
+      <path d="M22 610H914.1363636363636V548" stroke="#FFFFFF" />
+
+      <g id="active-colors">
+        <rect x="29" y="554" width="48" height="48" fill="#FFFFFF" stroke="#808080" />
+        <rect x="48" y="572" width="22" height="22" fill="#FFFFFF" stroke="#C0C0C0" stroke-width="1" />
+        <rect x="36" y="561" width="22" height="22" fill="#000000" stroke="#C0C0C0" stroke-width="1" />
+      </g>
+
+      <g id="palette-swatches">
+        <g id="palette-row-dark">
+          <g transform="translate(86 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#000000" /></g>
+          <g transform="translate(112 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#404040" /></g>
+          <g transform="translate(138 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#804000" /></g>
+          <g transform="translate(164 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#808000" /></g>
+          <g transform="translate(190 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#008000" /></g>
+          <g transform="translate(216 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#008080" /></g>
+          <g transform="translate(242 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#000080" /></g>
+          <g transform="translate(268 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#800080" /></g>
+          <g transform="translate(294 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#808080" /></g>
+          <g transform="translate(320 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#0000A8" /></g>
+          <g transform="translate(346 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#0000FF" /></g>
+          <g transform="translate(372 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#804000" /></g>
+          <g transform="translate(398 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#C00000" /></g>
+          <g transform="translate(424 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#800000" /></g>
+          <g transform="translate(450 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#008080" /></g>
+          <g transform="translate(476 552)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#404040" /></g>
+        </g>
+        <g id="palette-row-bright">
+          <g transform="translate(86 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#FFFFFF" /></g>
+          <g transform="translate(112 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#C0C0C0" /></g>
+          <g transform="translate(138 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#FF0000" /></g>
+          <g transform="translate(164 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#FFFF00" /></g>
+          <g transform="translate(190 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#00FF00" /></g>
+          <g transform="translate(216 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#00FFFF" /></g>
+          <g transform="translate(242 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#0000FF" /></g>
+          <g transform="translate(268 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#FF00FF" /></g>
+          <g transform="translate(294 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#FFFF80" /></g>
+          <g transform="translate(320 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#00FF80" /></g>
+          <g transform="translate(346 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#40E0D0" /></g>
+          <g transform="translate(372 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#8080FF" /></g>
+          <g transform="translate(398 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#FF4080" /></g>
+          <g transform="translate(424 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#FF80A0" /></g>
+          <g transform="translate(450 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#80FFFF" /></g>
+          <g transform="translate(476 579)"><use href="#palette-swatch-button" /><rect x="4" y="4" width="18" height="19" fill="#FFFFFF" /></g>
+        </g>
+      </g>
+    </g>
+
+  </g>
+</svg>

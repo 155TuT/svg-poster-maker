@@ -58,6 +58,28 @@ const assets = [
     filePath: path.join(scriptDir, "lain", "output", "png", "Lain-ascii-fine.png"),
     convertToPng: false,
   },
+  {
+    id: "win95-qrcode-source",
+    source: "qrcode-with-win95-explorer/output/qrcode-with-win95-explorer.png",
+    filePath: path.join(
+      scriptDir,
+      "qrcode-with-win95-explorer",
+      "output",
+      "qrcode-with-win95-explorer.png",
+    ),
+    convertToPng: false,
+  },
+  {
+    id: "win95-paint-title-source",
+    source: "title-with-win95-paint/output/title-with-win95-paint.png",
+    filePath: path.join(
+      scriptDir,
+      "title-with-win95-paint",
+      "output",
+      "title-with-win95-paint.png",
+    ),
+    convertToPng: false,
+  },
 ];
 
 const requiredSemanticIds = [
@@ -68,6 +90,14 @@ const requiredSemanticIds = [
   "app-icon-background",
   "lain-portrait-ghost",
   "lain-ascii-foreground",
+  "join-qr-code",
+  "win95-qrcode-pattern",
+  "win95-qrcode-source",
+  "win95-explorer-qrcode",
+  "title-with-win95-paint",
+  "win95-paint-title-pattern",
+  "win95-paint-title-source",
+  "win95-paint-title",
   "poster-copy",
   "design-philosophy-title-upper-right-corner",
   "design-philosophy-title-bottom-left-corner",
