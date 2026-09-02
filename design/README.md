@@ -18,16 +18,6 @@ npm.cmd --prefix svg-poster-maker\design run process
 npm.cmd --prefix svg-poster-maker\design install
 ```
 
-## 二维码处理
-
-`qrcode/process-qrcode.mjs` 从 `qrcode/raw-qrcode.jpg` 定位并提取二维码，先解码其内容，再重编码为黑色方块式二维码 `qrcode/qrcode-design-black.png`。成品只包含不透明纯黑模块与全透明背景，并保留 4 模块静区。
-
-```powershell
-npm.cmd --prefix svg-poster-maker\design run process:qr
-```
-
-脚本完成后会检查 PNG 的 Alpha 通道、透明背景、纯黑方块像素，并分别解码源图和成品；两者扫码结果不一致时会直接报错。
-
 ## 输出文件
 
 ```text

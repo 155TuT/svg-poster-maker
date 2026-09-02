@@ -22,8 +22,8 @@ const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 export const rawQrPath = path.join(scriptDir, "raw-qrcode.jpg");
 export const outputQrPath = path.join(scriptDir, "qrcode-design-black.png");
 
-const outputModuleSize = 16;
-const quietZoneModules = 4;
+const outputModuleSize = 22;
+const quietZonePixels = 5;
 
 function sha256(filePath) {
   return createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
@@ -174,19 +174,19 @@ async function decodeSource(filePath, crop) {
 
 async function writeSquareQrCode(text, filePath) {
   const writer = new QRCodeWriter();
-  const hints = new Map([[EncodeHintType.MARGIN, quietZoneModules]]);
+  const hints = new Map([[EncodeHintType.MARGIN, 0]]);
   const matrix = writer.encode(text, BarcodeFormat.QR_CODE, 0, 0, hints);
   const matrixWidth = matrix.getWidth();
   const matrixHeight = matrix.getHeight();
-  const width = matrixWidth * outputModuleSize;
-  const height = matrixHeight * outputModuleSize;
+  const width = matrixWidth * outputModuleSize + quietZonePixels * 2;
+  const height = matrixHeight * outputModuleSize + quietZonePixels * 2;
   const pixels = Buffer.alloc(width * height * 4);
 
   for (let moduleY = 0; moduleY < matrixHeight; moduleY += 1) {
     for (let moduleX = 0; moduleX < matrixWidth; moduleX += 1) {
       if (!matrix.get(moduleX, moduleY)) continue;
-      const startX = moduleX * outputModuleSize;
-      const startY = moduleY * outputModuleSize;
+      const startX = quietZonePixels + moduleX * outputModuleSize;
+      const startY = quietZonePixels + moduleY * outputModuleSize;
       for (let y = startY; y < startY + outputModuleSize; y += 1) {
         for (let x = startX; x < startX + outputModuleSize; x += 1) {
           const offset = (y * width + x) * 4;
@@ -208,7 +208,7 @@ async function writeSquareQrCode(text, filePath) {
   return {
     matrixModules: { width: matrixWidth, height: matrixHeight },
     moduleSize: outputModuleSize,
-    quietZoneModules,
+    quietZonePixels,
     outputPixels: { width, height },
   };
 }
@@ -223,6 +223,12 @@ async function inspectTransparentBlackQr(filePath) {
   let opaqueBlackPixels = 0;
   let partialAlphaPixels = 0;
   let nonBlackVisiblePixels = 0;
+  const visibleBounds = {
+    minX: info.width,
+    minY: info.height,
+    maxX: -1,
+    maxY: -1,
+  };
 
   for (let offset = 0; offset < data.length; offset += info.channels) {
     const r = data[offset];
@@ -230,7 +236,16 @@ async function inspectTransparentBlackQr(filePath) {
     const b = data[offset + 2];
     const alpha = data[offset + 3];
     if (alpha === 0) transparentPixels += 1;
-    else if (alpha === 255 && r === 0 && g === 0 && b === 0) opaqueBlackPixels += 1;
+    else if (alpha === 255 && r === 0 && g === 0 && b === 0) {
+      opaqueBlackPixels += 1;
+      const pixelIndex = offset / info.channels;
+      const x = pixelIndex % info.width;
+      const y = Math.floor(pixelIndex / info.width);
+      visibleBounds.minX = Math.min(visibleBounds.minX, x);
+      visibleBounds.minY = Math.min(visibleBounds.minY, y);
+      visibleBounds.maxX = Math.max(visibleBounds.maxX, x);
+      visibleBounds.maxY = Math.max(visibleBounds.maxY, y);
+    }
     else {
       if (alpha !== 255) partialAlphaPixels += 1;
       if (r !== 0 || g !== 0 || b !== 0) nonBlackVisiblePixels += 1;
@@ -241,8 +256,14 @@ async function inspectTransparentBlackQr(filePath) {
     && transparentPixels > 0
     && opaqueBlackPixels > 0
     && partialAlphaPixels === 0
-    && nonBlackVisiblePixels === 0;
-  if (!valid) throw new Error("Generated QR must contain only opaque black modules on a transparent background.");
+    && nonBlackVisiblePixels === 0
+    && visibleBounds.minX === quietZonePixels
+    && visibleBounds.minY === quietZonePixels
+    && visibleBounds.maxX === info.width - quietZonePixels - 1
+    && visibleBounds.maxY === info.height - quietZonePixels - 1;
+  if (!valid) {
+    throw new Error("Generated QR must contain only opaque black modules with an exact 5 px transparent quiet zone.");
+  }
 
   return {
     valid,
@@ -251,6 +272,8 @@ async function inspectTransparentBlackQr(filePath) {
     opaqueBlackPixels,
     partialAlphaPixels,
     nonBlackVisiblePixels,
+    quietZonePixels,
+    visibleBounds,
   };
 }
 

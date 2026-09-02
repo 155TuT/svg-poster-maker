@@ -5,13 +5,12 @@ import sharp from "sharp";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const options = {
-  source: "Lain.webp",
-  svg: "output/svg/Lain-ascii.svg",
+  svg: "Lain-ascii.svg",
   png: "output/png/Lain-ascii.png",
 };
 for (let index = 2; index < process.argv.length; index += 1) {
   const argument = process.argv[index];
-  if (!["--source", "--svg", "--png"].includes(argument)) {
+  if (!["--svg", "--png"].includes(argument)) {
     throw new Error(`Unknown option: ${argument}`);
   }
   const value = process.argv[++index];
@@ -21,11 +20,9 @@ for (let index = 2; index < process.argv.length; index += 1) {
 const resolveFromScript = (filePath) => (
   path.isAbsolute(filePath) ? filePath : path.join(scriptDir, filePath)
 );
-const sourcePath = resolveFromScript(options.source);
 const svgPath = resolveFromScript(options.svg);
 const pngPath = resolveFromScript(options.png);
 
-const sourceMetadata = await sharp(sourcePath).metadata();
 const svg = fs.readFileSync(svgPath, "utf8");
 const { data, info } = await sharp(pngPath)
   .ensureAlpha()
@@ -33,7 +30,6 @@ const { data, info } = await sharp(pngPath)
   .toBuffer({ resolveWithObject: true });
 const pngMetadata = await sharp(pngPath).metadata();
 
-if (!sourceMetadata.hasAlpha) throw new Error("Source no longer has an alpha channel.");
 if (!pngMetadata.hasAlpha || info.channels !== 4) throw new Error("PNG output has no alpha channel.");
 if (svg.includes("<image")) throw new Error("SVG unexpectedly contains a raster image instead of ASCII glyphs.");
 if (!svg.includes('id="ascii-art"') || !svg.includes("<use")) {
@@ -65,13 +61,9 @@ if (corners.some((alpha) => alpha !== 0)) {
 
 console.log(JSON.stringify({
   valid: true,
-  source: {
-    path: sourcePath,
-    pixels: [sourceMetadata.width, sourceMetadata.height],
-    hasAlpha: sourceMetadata.hasAlpha,
-  },
   svg: {
     path: svgPath,
+    editable: true,
     rasterImages: 0,
     glyphUses: (svg.match(/<use\b/g) ?? []).length,
   },

@@ -1,0 +1,16 @@
+{
+  "name": "west2-online-win95-explorer-qrcode",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "process:qr": "node qrcode/process-qrcode.mjs",
+    "render": "node process-windows-explorer.mjs",
+    "check": "npm run process:qr && npm run render"
+  },
+  "dependencies": {
+    "sharp": "0.35.3"
+  },
+  "devDependencies": {
+    "@zxing/library": "0.21.3"
+  }
+}
