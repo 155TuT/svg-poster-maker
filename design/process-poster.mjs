@@ -8,14 +8,15 @@ import OpenCC from "opencc-js";
 import sharp from "sharp";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
-const svgPath = path.join(scriptDir, "design.svg");
+const htmlPath = path.join(scriptDir, "design.html");
 const pngPath = path.join(scriptDir, "output", "png", "design-poster.png");
 const pdfPath = path.join(scriptDir, "output", "pdf", "design-poster.pdf");
 
-const canvas = { width: 595, height: 842 };
-const exportPixels = { width: 2480, height: 3508 };
+const canvas = { width: 842, height: 1191 };
+const layoutViewBox = { width: 595, height: 842 };
+const exportPixels = { width: 3508, height: 4961 };
 const exportDpi = 300;
-const pagePoints = { width: 595.2756, height: 841.8898 };
+const pagePoints = { width: 841.8898, height: 1190.5512 };
 const evaTitleEffects = {
   blurScale: 1.4,
   blurSigma: 0.3,
@@ -80,6 +81,17 @@ const assets = [
     ),
     convertToPng: false,
   },
+  {
+    id: "win95-notebook-maintext-source",
+    source: "maintext-with-win95-notebook/output/maintext-with-win95-notebook.png",
+    filePath: path.join(
+      scriptDir,
+      "maintext-with-win95-notebook",
+      "output",
+      "maintext-with-win95-notebook.png",
+    ),
+    convertToPng: false,
+  },
 ];
 
 const requiredSemanticIds = [
@@ -98,6 +110,10 @@ const requiredSemanticIds = [
   "win95-paint-title-pattern",
   "win95-paint-title-source",
   "win95-paint-title",
+  "maintext-with-win95-notebook",
+  "win95-notebook-maintext-pattern",
+  "win95-notebook-maintext-source",
+  "win95-notebook-maintext",
   "poster-copy",
   "design-philosophy-title-upper-right-corner",
   "design-philosophy-title-bottom-left-corner",
@@ -109,25 +125,29 @@ function sha256(buffer) {
   return createHash("sha256").update(buffer).digest("hex");
 }
 
-function synchronizeImage(svg, asset, dataUri) {
+function embedImageForRender(svg, asset, dataUri) {
   const imagePattern = new RegExp(`<image\\b(?=[^>]*\\bid="${asset.id}")[^>]*\\/>`, "s");
   const match = svg.match(imagePattern);
   if (!match) throw new Error(`Missing image element: ${asset.id}`);
 
-  let image = match[0];
+  const image = match[0];
   const dataSource = image.match(/\sdata-source="([^"]+)"/)?.[1];
-  if (dataSource && dataSource !== asset.source) {
+  if (dataSource !== asset.source) {
     throw new Error(`${asset.id} data-source must be ${asset.source}; received ${dataSource}`);
   }
-  if (!dataSource) {
-    image = image.replace(
-      new RegExp(`\\sid="${asset.id}"`),
-      ` id="${asset.id}" data-source="${asset.source}"`,
-    );
+  const href = image.match(/\shref="([^"]+)"/)?.[1];
+  if (href !== asset.source) {
+    throw new Error(`${asset.id} href must be the external asset ${asset.source}; received ${href}`);
   }
-  if (!/\shref="[^"]+"/.test(image)) throw new Error(`Missing href: ${asset.id}`);
-  image = image.replace(/\shref="[^"]+"/, ` href="${dataUri}"`);
-  return svg.replace(match[0], image);
+
+  const embeddedImage = image.replace(/\shref="[^"]+"/, ` href="${dataUri}"`);
+  return svg.replace(match[0], embeddedImage);
+}
+
+function extractPosterSvg(html) {
+  const match = html.match(/<svg\b(?=[^>]*\bid="poster-editor")[\s\S]*?<\/svg>/);
+  if (!match) throw new Error('design.html must contain one inline SVG with id="poster-editor".');
+  return match[0];
 }
 
 function normalizeSvgStructure(svg) {
@@ -253,7 +273,7 @@ function splitFontDisplayLayer(svg) {
   const copyGroupOpenTag = svg.match(/<g\b(?=[^>]*\bid="poster-copy")[^>]*>/)?.[0] ?? "<g>";
   const textSvg = [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${canvas.width}" height="${canvas.height}" viewBox="0 0 ${canvas.width} ${canvas.height}" fill="none">`,
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${canvas.width}" height="${canvas.height}" viewBox="0 0 ${layoutViewBox.width} ${layoutViewBox.height}" fill="none">`,
     globalStyle ? `<defs>${globalStyle}</defs>` : "",
     copyGroupOpenTag,
     ...displayTextElements,
@@ -310,16 +330,22 @@ async function renderEvaTitleTextLayer(textSvg) {
   return sharp(data, { raw: info }).png().toBuffer();
 }
 
-const originalSvg = fs.readFileSync(svgPath, "utf8");
-if (!originalSvg.includes(`viewBox="0 0 ${canvas.width} ${canvas.height}"`)) {
-  throw new Error(`design.svg must keep the ${canvas.width} x ${canvas.height} viewBox.`);
+const sourceHtml = fs.readFileSync(htmlPath, "utf8");
+const editableSvg = normalizeSvgStructure(extractPosterSvg(sourceHtml));
+if (
+  !editableSvg.includes(`width="${canvas.width}" height="${canvas.height}"`)
+  || !editableSvg.includes(`viewBox="0 0 ${layoutViewBox.width} ${layoutViewBox.height}"`)
+) {
+  throw new Error(
+    `design.html must keep the fixed ${canvas.width} x ${canvas.height} A3 canvas and ${layoutViewBox.width} x ${layoutViewBox.height} layout viewBox.`,
+  );
 }
 for (const id of requiredSemanticIds) {
   const idPattern = new RegExp(`\\bid="${id.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}"`);
-  if (!idPattern.test(originalSvg)) throw new Error(`Missing semantic layer: ${id}`);
+  if (!idPattern.test(editableSvg)) throw new Error(`Missing semantic layer: ${id}`);
 }
 
-let sourceSvg = normalizeSvgStructure(originalSvg);
+let renderSourceSvg = editableSvg;
 const synchronizedAssets = [];
 for (const asset of assets) {
   const sourceBuffer = fs.readFileSync(asset.filePath);
@@ -327,8 +353,8 @@ for (const asset of assets) {
   const embeddedBuffer = asset.convertToPng
     ? await sharp(sourceBuffer).png({ compressionLevel: 9, adaptiveFiltering: true }).toBuffer()
     : sourceBuffer;
-  sourceSvg = synchronizeImage(
-    sourceSvg,
+  renderSourceSvg = embedImageForRender(
+    renderSourceSvg,
     asset,
     `data:image/png;base64,${embeddedBuffer.toString("base64")}`,
   );
@@ -343,10 +369,9 @@ for (const asset of assets) {
   });
 }
 
-// design.svg stays editable and contains only the author's original copy.
+// design.html keeps editable copy and external image paths. Base64 data and
 // Traditional substitutions exist only in the in-memory SVG used for exports.
-if (sourceSvg !== originalSvg) fs.writeFileSync(svgPath, sourceSvg);
-const typographyRender = renderMatisseTypography(sourceSvg);
+const typographyRender = renderMatisseTypography(renderSourceSvg);
 const renderSvg = typographyRender.svg;
 const typographyLayers = splitFontDisplayLayer(renderSvg);
 
@@ -389,15 +414,23 @@ if (
   Math.abs(outputPdfSize.width - pagePoints.width) > 0.01 ||
   Math.abs(outputPdfSize.height - pagePoints.height) > 0.01
 ) {
-  throw new Error("Unexpected PDF page count or A4 page dimensions.");
+  throw new Error("Unexpected PDF page count or A3 page dimensions.");
 }
 
 console.log(JSON.stringify({
   processedAt: new Date().toISOString(),
-  svg: {
-    path: svgPath,
+  html: {
+    path: htmlPath,
     authoritative: true,
-    selfContained: true,
+    fixedCanvas: [canvas.width, canvas.height],
+    layoutViewBox: [layoutViewBox.width, layoutViewBox.height],
+    externalAssets: true,
+    sourceBytes: Buffer.byteLength(sourceHtml),
+    sourceSha256: sha256(Buffer.from(sourceHtml)),
+    editableSvgSha256: sha256(Buffer.from(editableSvg)),
+  },
+  render: {
+    format: "in-memory SVG",
     synchronizedAssets,
     typography: typographyRender.report,
     typographyEffects: {
@@ -412,7 +445,7 @@ console.log(JSON.stringify({
         luminanceWeighted: true,
       },
     },
-    sourceSha256: sha256(Buffer.from(sourceSvg)),
+    embeddedSourceSha256: sha256(Buffer.from(renderSourceSvg)),
     exportRenderSha256: sha256(Buffer.from(renderSvg)),
   },
   exports: {
@@ -426,7 +459,7 @@ console.log(JSON.stringify({
       path: pdfPath,
       pages: outputPdf.getPageCount(),
       pagePoints: [outputPdfSize.width, outputPdfSize.height],
-      pageMillimeters: [210, 297],
+      pageMillimeters: [297, 420],
       sha256: sha256(pdfBytes),
     },
   },

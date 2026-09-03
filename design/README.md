@@ -1,12 +1,14 @@
 # 西二在线设计组海报
 
-`design.svg` 是海报的编辑源文件。它使用语义化图层、内嵌图片和集中式 CSS，可直接修改文字、坐标、尺寸与样式。
+`design.html` 是海报的编辑源文件。它在固定的 `842 × 1191` A3 画布中保留内联 SVG、语义化图层和集中式 CSS，可直接修改文字、坐标、尺寸与样式。页面没有响应式布局或交互逻辑。
+
+PNG/WebP 素材通过相对路径引用，不再以 Base64 写入源文件。导出脚本只在内存中临时嵌入图片，因此编辑、Git 同步和生成过程不会反复改写大段图片数据。
 
 ## 工作流
 
-1. 在 `design.svg` 中编辑简体文案与版式。
+1. 在 `design.html` 的 `<svg id="poster-editor">` 中编辑简体文案与版式。
 2. 运行 `process-poster.mjs`。
-3. 脚本同步本地图片、处理导出字形，并生成正式 PNG 与 PDF。
+3. 脚本检查本地图片引用、在内存中组装导出 SVG、处理导出字形，并生成正式 PNG 与 PDF。
 
 ```powershell
 npm.cmd --prefix svg-poster-maker\design run process
@@ -26,14 +28,17 @@ output/
 └─ pdf/design-poster.pdf
 ```
 
-- PNG：`2480 × 3508 px`，300 dpi。
-- PDF：单页 A4，`210 × 297 mm`。
+- PNG：`3508 × 4961 px`，300 dpi。
+- PDF：单页 A3，`297 × 420 mm`。
 
-## SVG 结构
+也可以直接在浏览器中打开 `design.html` 预览固定 A3 画布。
 
-`design.svg` 按照网页式结构组织：
+## HTML / SVG 结构
 
-- `<defs>`：全局字体、图案、裁切区域和内嵌素材。
+`design.html` 的 `<body>` 中只有一张固定尺寸的内联 SVG：
+
+- `<head><style>`：将页面和画布固定为 `842 × 1191`。
+- `<defs>`：全局字体、图案、裁切区域和外部素材声明。
 - `poster-artwork`：海报内容根图层。
 - `background-artwork`：纸张与 Apple 图标背景。
 - `layout-guides`：构图辅助线。
@@ -51,8 +56,17 @@ output/
 | `app-icon-source` | `apple-app-icon-develop/apple-app-icon-develop.png` | 满版背景 |
 | `lain-portrait-source` | `lain/Lain.webp` | 16% 透明度的人物残影 |
 | `lain-ascii-source` | `lain/output/png/Lain-ascii-fine.png` | 彩色 ASCII 主视觉 |
+| `win95-qrcode-source` | `qrcode-with-win95-explorer/output/qrcode-with-win95-explorer.png` | Windows 95 Explorer 二维码 |
+| `win95-paint-title-source` | `title-with-win95-paint/output/title-with-win95-paint.png` | Windows 95 Paint 标题 |
+| `win95-notebook-maintext-source` | `maintext-with-win95-notebook/output/maintext-with-win95-notebook.png` | Windows 95 Notebook 正文 |
 
-每个 `<image>` 使用 `data-source` 记录本地路径。脚本读取这些素材并更新对应的 Base64 数据，使 `design.svg` 保持自包含。
+每个 `<image>` 的 `data-source` 与 `href` 都使用同一个相对路径。脚本会验证两者一致，并仅在导出用的内存副本中转换为 Base64；`design.html` 本身始终保留外部引用。
+
+新增图片时，需要同时：
+
+1. 将图片保存到 `design/` 下的语义化目录。
+2. 在 `design.html` 中添加带唯一 `id`、`data-source` 和 `href` 的 `<image>`。
+3. 在 `process-poster.mjs` 的 `assets` 数组中登记相同的 ID 与路径。
 
 ## 字体处理
 
@@ -70,7 +84,7 @@ font-family: "FOT-Matisse Pro EB", "MatissePro-EB",
 3. `fontkit` 确认候选字形存在后，将候选写入内存渲染副本。
 4. 剩余缺失字符由思源宋体 Heavy 渲染。
 
-`design.svg` 保存作者输入的简体正文；PNG 与 PDF 使用内存渲染副本。当前标题在导出时采用 `设 → 設`、`计 → 計`，其余字符保持原文。
+`design.html` 保存作者输入的简体正文；PNG 与 PDF 使用内存渲染副本。当前标题在导出时采用 `设 → 設`、`计 → 計`，其余字符保持原文。
 
 Matisse EB 由本机授权字体提供，思源宋体 Heavy 提供缺字回退。自定义字体位置可通过 `MATISSE_FONT_PATH` 指向 `FOT-MatissePro-EB.otf`。
 
@@ -85,7 +99,8 @@ Matisse EB 由本机授权字体提供，思源宋体 Heavy 提供缺字回退�
 
 ## 版式参数
 
-- SVG 画布：`595 × 842`，A4 纵向比例。
+- HTML 与 SVG 画布：固定 `842 × 1191`，A3 纵向比例。
+- SVG 内部继续使用 `595 × 842` 版式坐标系，由浏览器和导出脚本等比放大，避免改写现有图层坐标或造成图形变形。
 - Apple 图标背景：`x=-127, y=-4, 850 × 850`。
 - Lain 图层：`x=98, y=282, 400 × 560`。
 - 原图残影透明度：`0.24`。

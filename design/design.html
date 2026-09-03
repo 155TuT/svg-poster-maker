@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=842">
+  <title>西二在线设计组纳新海报</title>
+  <style>
+    html, body {
+      margin: 0;
+      width: 842px;
+      height: 1191px;
+      overflow: hidden;
+      background: #fff;
+    }
+    #poster-editor {
+      display: block;
+      width: 842px;
+      height: 1191px;
+    }
+  </style>
+</head>
+<body>
+<svg id="poster-editor" xmlns="http://www.w3.org/2000/svg"
+  width="842" height="1191" viewBox="0 0 595 842" fill="none"
+  role="img" aria-labelledby="poster-title poster-description">
+  <title id="poster-title">西二在线设计组纳新海报底图</title>
+  <desc id="poster-description">Apple 应用图标背景与 Lain 彩色 ASCII 主视觉组合底图</desc>
+
+  <defs>
+    <style>
+      .font-display {
+        font-family: "FOT-Matisse Pro EB", "MatissePro-EB", "Source Han Serif SC Heavy", "思源宋体 Heavy", "Noto Serif SC", serif;
+        font-weight: normal;
+        font-style: normal;
+        text-rendering: optimizeLegibility;
+      }
+      .font-caption {
+        fill: #767676;
+        font-size: 7.5px;
+        letter-spacing: 0.85px;
+      }
+    </style>
+
+    <pattern id="app-icon-pattern"
+      patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use href="#app-icon-source" transform="scale(0.000487567)" />
+    </pattern>
+    <pattern id="lain-portrait-pattern"
+      patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use href="#lain-portrait-source" transform="scale(0.00285714 0.00204082)" />
+    </pattern>
+    <pattern id="lain-ascii-pattern"
+      patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use href="#lain-ascii-source" transform="scale(0.000341797 0.000244141)" />
+    </pattern>
+    <pattern id="win95-qrcode-pattern"
+      patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use href="#win95-qrcode-source" transform="scale(0.000771605 0.000719424)" />
+    </pattern>
+    <pattern id="win95-paint-title-pattern"
+      patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use href="#win95-paint-title-source" transform="scale(0.000728332 0.001082251)" />
+    </pattern>
+
+    <pattern id="win95-notebook-maintext-pattern"
+      patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use href="#win95-notebook-maintext-source" transform="scale(0.001190476 0.001106195)" />
+    </pattern>
+
+    <clipPath id="poster-clip">
+      <rect width="595" height="842" fill="white" />
+    </clipPath>
+
+    <!-- Local source assets stay external; process-poster.mjs embeds them only in memory for export. -->
+    <image id="app-icon-source" data-source="apple-app-icon-develop/apple-app-icon-develop.png"
+      width="2051" height="2051" preserveAspectRatio="none"
+      href="apple-app-icon-develop/apple-app-icon-develop.png" />
+    <image id="lain-portrait-source" data-source="lain/Lain.webp"
+      width="350" height="490" preserveAspectRatio="none"
+      href="lain/Lain.webp" />
+    <image id="lain-ascii-source" data-source="lain/output/png/Lain-ascii-fine.png"
+      width="2926" height="4096" preserveAspectRatio="none"
+      href="lain/output/png/Lain-ascii-fine.png" />
+    <image id="win95-qrcode-source" data-source="qrcode-with-win95-explorer/output/qrcode-with-win95-explorer.png"
+      width="1296" height="1390" preserveAspectRatio="xMidYMid meet"
+      href="qrcode-with-win95-explorer/output/qrcode-with-win95-explorer.png" />
+    <image id="win95-notebook-maintext-source" data-source="maintext-with-win95-notebook/output/maintext-with-win95-notebook.png"
+      width="840" height="904" preserveAspectRatio="xMidYMid meet"
+      href="maintext-with-win95-notebook/output/maintext-with-win95-notebook.png" />
+    <image id="win95-paint-title-source" data-source="title-with-win95-paint/output/title-with-win95-paint.png"
+      width="1373" height="924" preserveAspectRatio="xMidYMid meet"
+      href="title-with-win95-paint/output/title-with-win95-paint.png" />
+  </defs>
+
+  <g id="poster-artwork" clip-path="url(#poster-clip)">
+    <g id="background-artwork">
+      <rect id="paper-background" width="595" height="842" fill="white" />
+      <rect id="app-icon-background"
+        x="-127" y="-4" width="850" height="850"
+        fill="url(#app-icon-pattern)" />
+    </g>
+
+    <g id="layout-guides" stroke="#C2C2C2">
+      <rect id="poster-inner-frame" x="12.5" y="16.5" width="571" height="809" />
+      <rect id="top-right-registration-mark" x="583.5" y="-2.5" width="13" height="19" />
+      <rect id="bottom-right-registration-mark" x="583.5" y="825.5" width="13" height="19" />
+      <rect id="top-left-registration-mark" x="-0.5" y="-2.5" width="13" height="19" />
+      <rect id="bottom-left-registration-mark" x="-0.5" y="825.5" width="13" height="19" />
+    </g>
+
+    <g id="lain-hero-artwork">
+      <rect id="lain-portrait-ghost"
+        x="94" y="282" width="400" height="560"
+        fill="url(#lain-portrait-pattern)" fill-opacity="0.24" />
+      <rect id="lain-ascii-foreground"
+        x="94" y="282" width="400" height="560"
+        fill="url(#lain-ascii-pattern)" />
+    </g>
+
+    <g id="maintext-with-win95-notebook">
+      <rect id="win95-notebook-maintext"
+        x="60" y="525" width="168" height="180.8"
+        fill="url(#win95-notebook-maintext-pattern)"/>
+    </g>
+
+    <g id="join-qr-code">
+      <rect id="win95-explorer-qrcode"
+        x="378" y="608" width="194.4" height="208.5"
+        fill="url(#win95-qrcode-pattern)"/>
+    </g>
+
+    <g id="title-with-win95-paint">
+      <rect id="win95-paint-title"
+        x="25" y="58" width="331.69" height="223.22"
+        fill="url(#win95-paint-title-pattern)"/>
+    </g>
+
+    <g id="title" fill="#202020">
+       <text id="title-design" class="font-display" letter-spacing="1">
+        <tspan x="65" y="120" font-size="36" fill="#F99C1A">西二在线</tspan>
+        <tspan x="85" y="230" font-size="52">设计组、</tspan>
+        <tspan x="265" y="155" font-size="72">纳</tspan>
+        <tspan x="265" y="228" font-size="72">新</tspan>
+        
+      </text>
+    </g>
+
+    <g id="poster-copy" fill="#202020">
+      <text id="design-philosophy-title-upper-right-corner" class="font-display" font-size="42" letter-spacing="1">
+        <tspan x="298" y="54">不要设计形式，</tspan>
+        <tspan x="538" y="99">去</tspan>
+        <tspan x="538" y="144">设</tspan>
+        <tspan x="538" y="189">计</tspan>
+        <tspan x="538" y="234">哲</tspan>
+        <tspan x="538" y="279">学</tspan>
+      </text>
+      <text id="design-philosophy-title-bottom-left-corner" class="font-display" font-size="42" letter-spacing="1">
+        <tspan x="13" y="594">优</tspan>
+        <tspan x="13" y="639">秀</tspan>
+        <tspan x="13" y="684">的</tspan>
+        <tspan x="13" y="729">设</tspan>
+        <tspan x="13" y="774">计</tspan>
+        <tspan x="16" y="788">，</tspan>
+        <tspan x="38" y="818">会替产品说话</tspan>
+      </text>
+
+      <g id="editorial-caption-top-left">
+        <text id="caption-top-left-horizontal" class="font-display font-caption"
+          x="16" y="26">©2026 WEST2-ONLINE</text>
+        <text id="caption-top-left-vertical" class="font-display font-caption"
+          x="22" y="130" transform="rotate(-90 22 130)">FUZHOU UNIVERSITY</text>
+      </g>
+      <g id="editorial-caption-bottom-right">
+        <text id="caption-bottom-right-horizontal" class="font-display font-caption"
+          x="480" y="824">DESIGN WITH LOVE❤</text>
+        <text id="caption-bottom-right-vertical" class="font-display font-caption"
+          x="581" y="816" transform="rotate(-90 581 816)">GITHUB@WEST2ONLINE/</text>
+      </g>
+    </g>
+  </g>
+
+</svg>
+
+</body>
+</html>
