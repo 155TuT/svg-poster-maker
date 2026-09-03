@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+  width="840" height="904" viewBox="0 0 420 452" fill="none"
+  role="img" aria-labelledby="notebook-title notebook-description">
+  <title id="notebook-title">Windows 95 Notepad main text window</title>
+  <desc id="notebook-description">An editable vector recreation of a Windows 95 Notepad window containing recruitment copy for the West2 Online design group.</desc>
+
+  <defs>
+    <style><![CDATA[
+      .ui-text {
+        font-family: Arial, "Microsoft YaHei UI", sans-serif;
+        font-size: 16px;
+        fill: #000000;
+      }
+      .title-text {
+        font-family: Arial, "Microsoft YaHei UI", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        fill: #FFFFFF;
+      }
+      .editor-text {
+        font-family: "Fixedsys Excelsior", Fixedsys, "Courier New", "Microsoft YaHei UI", monospace;
+        font-size: 19px;
+        fill: #000000;
+      }
+      .editor-heading {
+        font-weight: 700;
+        letter-spacing: 0.8px;
+      }
+      .pixel {
+        shape-rendering: crispEdges;
+        stroke-linecap: square;
+        stroke-linejoin: miter;
+      }
+    ]]></style>
+
+    <pattern id="scroll-track-pattern" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#FFFFFF" />
+      <rect width="2" height="2" fill="#C0C0C0" />
+      <rect x="2" y="2" width="2" height="2" fill="#C0C0C0" />
+    </pattern>
+
+    <g id="raised-button-face" class="pixel">
+      <rect width="24" height="24" fill="#C0C0C0" />
+      <path d="M0 24V0H24" stroke="#FFFFFF" stroke-width="2" />
+      <path d="M2 24H24V2" stroke="#000000" stroke-width="2" />
+      <path d="M3 21H21V3" stroke="#808080" />
+    </g>
+  </defs>
+
+  <g id="win95-notebook-window" class="pixel">
+    <rect id="window-shadow" x="13" y="13" width="400" height="430" fill="#000000" />
+    <rect id="window-shell" x="8" y="8" width="400" height="430" fill="#C0C0C0" />
+    <path id="window-outer-highlight" d="M8 438V8H408" stroke="#FFFFFF" stroke-width="3" />
+    <path id="window-outer-shadow" d="M11 438H408V11" stroke="#808080" stroke-width="3" />
+    <path id="window-outer-dark-edge" d="M13 436H406V13" stroke="#000000" stroke-width="2" />
+
+    <g id="notebook-title-bar">
+      <rect x="15" y="15" width="386" height="31" fill="#000080" />
+
+      <g id="notebook-app-icon" transform="translate(20 21)" class="pixel">
+        <rect x="1" y="2" width="17" height="16" fill="#FFFFFF" stroke="#000000" />
+        <rect x="1" y="1" width="17" height="4" fill="#C0C0C0" stroke="#000000" />
+        <path d="M4 0V5M8 0V5M12 0V5M16 0V5" stroke="#000000" stroke-width="2" />
+        <path d="M4 8H15M4 11H15M4 14H12" stroke="#000080" />
+      </g>
+
+      <text x="45" y="36" class="title-text">DESIGN.TXT - Notepad</text>
+
+      <g id="window-controls">
+        <g id="minimize-button" transform="translate(317 19)">
+          <use href="#raised-button-face" />
+          <path d="M7 17H16V19H7Z" fill="#000000" />
+        </g>
+        <g id="maximize-button" transform="translate(345 19)">
+          <use href="#raised-button-face" />
+          <rect x="6" y="6" width="12" height="11" fill="none" stroke="#000000" stroke-width="2" />
+          <path d="M7 8H17" stroke="#000000" stroke-width="2" />
+        </g>
+        <g id="close-button" transform="translate(373 19)">
+          <use href="#raised-button-face" />
+          <path d="M7 7L17 17M17 7L7 17" stroke="#000000" stroke-width="2" />
+        </g>
+      </g>
+    </g>
+
+    <g id="notebook-menu-bar">
+      <text x="20" y="69" class="ui-text"><tspan text-decoration="underline">F</tspan>ile</text>
+      <text x="62" y="69" class="ui-text"><tspan text-decoration="underline">E</tspan>dit</text>
+      <text x="104" y="69" class="ui-text"><tspan text-decoration="underline">S</tspan>earch</text>
+      <text x="166" y="69" class="ui-text"><tspan text-decoration="underline">H</tspan>elp</text>
+      <path d="M15 79H401" stroke="#808080" />
+      <path d="M15 80H401" stroke="#FFFFFF" />
+    </g>
+
+    <g id="notebook-editor-frame">
+      <rect x="15" y="84" width="386" height="345" fill="#FFFFFF" />
+      <path d="M15 429V84H401" stroke="#808080" stroke-width="2" />
+      <path d="M17 427H401V86" stroke="#FFFFFF" />
+      <path d="M16 428V85H400" stroke="#000000" />
+
+      <g id="notebook-editor">
+        <rect x="19" y="88" width="359" height="318" fill="#FFFFFF" />
+
+        <g id="notebook-maintext" class="editor-text">
+          <text x="34" y="121" class="editor-text editor-heading">WEST2 ONLINE / DESIGN GROUP</text>
+          
+          <text x="34" y="157" class="editor-text">
+            <tspan x="34" dy="0">我们不只培养审美、构图和协作，</tspan>
+            <tspan x="34" dy="28">我们让产品被选择、被使用、被记住。</tspan>
+          </text>
+
+          <text x="34" y="218" class="editor-text">-----------------------------</text>
+
+          <text x="34" y="250" class="editor-text editor-heading">WHAT WE DO</text>
+          <text x="34" y="284" class="editor-text">
+            <tspan x="34" dy="0">  · GRAPHIC &amp; UI/UX DESIGN</tspan>
+            <tspan x="34" dy="28">  · CO-DESIGN WITH AI &amp; AGENT</tspan>
+            <tspan x="34" dy="28">  · ANALYSIS PROCUDTS</tspan>
+          </text>
+
+          <text x="34" y="382" class="editor-text editor-heading">JOIN US</text>
+          <rect id="text-caret" x="118" y="365" width="2" height="21" fill="#000000" />
+        </g>
+      </g>
+
+      <g id="vertical-scrollbar">
+        <rect x="378" y="87" width="20" height="319" fill="url(#scroll-track-pattern)" />
+
+        <g id="scroll-up-button" transform="translate(378 87)">
+          <use href="#raised-button-face" transform="scale(0.833333)" />
+          <path d="M5 13L10 7L15 13Z" fill="#000000" />
+        </g>
+
+        <g id="vertical-scroll-thumb">
+          <rect x="378" y="107" width="20" height="175" fill="#C0C0C0" />
+          <path d="M378 282V107H398" stroke="#FFFFFF" stroke-width="2" />
+          <path d="M380 282H398V109" stroke="#000000" stroke-width="2" />
+          <path d="M381 279H395V110" stroke="#808080" />
+        </g>
+
+        <g id="scroll-down-button" transform="translate(378 386)">
+          <use href="#raised-button-face" transform="scale(0.833333)" />
+          <path d="M5 7H15L10 13Z" fill="#000000" />
+        </g>
+      </g>
+
+      <g id="horizontal-scrollbar">
+        <rect x="19" y="406" width="359" height="20" fill="url(#scroll-track-pattern)" />
+
+        <g id="scroll-left-button" transform="translate(19 406)">
+          <use href="#raised-button-face" transform="scale(0.833333)" />
+          <path d="M13 5L7 10L13 15Z" fill="#000000" />
+        </g>
+
+        <g id="horizontal-scroll-thumb">
+          <rect x="39" y="406" width="221" height="20" fill="#C0C0C0" />
+          <path d="M39 426V406H260" stroke="#FFFFFF" stroke-width="2" />
+          <path d="M41 426H260V408" stroke="#000000" stroke-width="2" />
+          <path d="M42 423H257V409" stroke="#808080" />
+        </g>
+
+        <g id="scroll-right-button" transform="translate(358 406)">
+          <use href="#raised-button-face" transform="scale(0.833333)" />
+          <path d="M7 5L13 10L7 15Z" fill="#000000" />
+        </g>
+      </g>
+
+      <g id="scrollbar-corner">
+        <rect x="378" y="406" width="20" height="20" fill="#C0C0C0" />
+        <path d="M381 423L395 409M386 425L397 414M391 425L397 419" stroke="#FFFFFF" />
+        <path d="M383 425L397 411M388 425L397 416M393 425L397 421" stroke="#808080" />
+      </g>
+    </g>
+  </g>
+</svg>

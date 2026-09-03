@@ -1,0 +1,12 @@
+{
+  "name": "west2-online-maintext-with-win95-notebook",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node render-win95-notebook.mjs",
+    "check": "node render-win95-notebook.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.3"
+  }
+}
