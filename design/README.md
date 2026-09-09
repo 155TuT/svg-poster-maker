@@ -88,6 +88,8 @@ font-family: "FOT-Matisse Pro EB", "MatissePro-EB",
 
 Matisse EB 由本机授权字体提供，思源宋体 Heavy 提供缺字回退。自定义字体位置可通过 `MATISSE_FONT_PATH` 指向 `FOT-MatissePro-EB.otf`。
 
+> 如果想在你自己的电脑上运行 `svg-poster-maker/design/process-poster.mjs`，请先确保你找到了合适的字体文件
+
 ### EVA 标题质感
 
 脚本将 `.font-display` 单独渲染为透明文字层，并采用 eva-title 的核心参数处理：
