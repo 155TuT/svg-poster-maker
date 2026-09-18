@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  width="1206" height="2622" viewBox="0 0 1206 2622" role="img" aria-labelledby="art-title art-desc">
+  <title id="art-title">西二在线 · 2026 纳新 — 从这里展开</title>
+  <desc id="art-desc">暖纸色上的原创立体代码括号。炭灰与橙色折面在留白中相向展开，透明薄片和制图线连接其间。西二在线 2026 纳新，纳新啦三字沿中轴纵向排列，新字位于画布绝对中心。福uu，我在西二，为你在线。</desc>
+  <metadata>Editable vector artwork, 2026-09-18. Palette and font stacks derived from ../west2online/west2-online-a4.svg; no poster background, hero, or QR reused. Canvas matches 2025-opening.png. Text remains live.</metadata>
+  <defs>
+    <style><![CDATA[
+      .font-cjk { font-family: "Alimama ShuHeiTi", "阿里妈妈数黑体", "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Source Han Sans CN", "PingFang SC", "Microsoft YaHei", sans-serif; font-weight: 700; }
+      .font-latin { font-family: "Inter", "Helvetica Neue", "Segoe UI", Arial, sans-serif; }
+      .font-numeric { font-family: "IBM Plex Sans", "Inter", "Segoe UI", Arial, sans-serif; }
+      .construction { fill: none; stroke: #9C9486; stroke-width: 1.1; }
+      .edge-light { fill: none; stroke: #FFF9EE; stroke-width: 1.5; stroke-opacity: .7; }
+    ]]></style>
+    <clipPath id="page-clip"><rect width="1206" height="2622"/></clipPath>
+    <linearGradient id="paper-tone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7F1E7"/><stop offset=".5" stop-color="#F2EBDD"/><stop offset="1" stop-color="#F8F3EB"/>
+    </linearGradient>
+    <radialGradient id="paper-light" cx=".36" cy=".42" r=".7">
+      <stop stop-color="#FFFDF7" stop-opacity=".9"/><stop offset="1" stop-color="#FFFDF7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="graphite-front" x1="0" y1="0" x2="1" y2=".85">
+      <stop stop-color="#555A58"/><stop offset=".48" stop-color="#424747"/><stop offset="1" stop-color="#2E3434"/>
+    </linearGradient>
+    <linearGradient id="graphite-edge" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7B7B72"/><stop offset="1" stop-color="#4E5350"/>
+    </linearGradient>
+    <linearGradient id="orange-front" x1="0" y1="1" x2=".65" y2="0">
+      <stop stop-color="#E48009"/><stop offset=".48" stop-color="#F99C1A"/><stop offset="1" stop-color="#FFBB4B"/>
+    </linearGradient>
+    <linearGradient id="orange-edge" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#C56A09"/><stop offset="1" stop-color="#A94D00"/>
+    </linearGradient>
+    <linearGradient id="vellum" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFF9EC" stop-opacity=".58"/><stop offset=".55" stop-color="#F4D8A5" stop-opacity=".18"/><stop offset="1" stop-color="#FFE9C2" stop-opacity=".7"/>
+    </linearGradient>
+    <linearGradient id="diagram-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="white" stop-opacity="0"/><stop offset=".3" stop-color="white"/><stop offset=".7" stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="diagram-mask"><rect x="0" y="550" width="1206" height="1430" fill="url(#diagram-fade)"/></mask>
+    <pattern id="graphite-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.05" fill="#74756C" opacity=".38"/>
+    </pattern>
+    <pattern id="orange-dots" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="2" height="2" fill="#D88624" opacity=".42"/>
+    </pattern>
+    <filter id="paper-grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="26" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".18"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    <filter id="soft-shadow" x="-40%" y="-100%" width="180%" height="300%">
+      <feGaussianBlur stdDeviation="36"/>
+    </filter>
+  </defs>
+
+  <g id="paper" inkscape:groupmode="layer" inkscape:label="01 · 暖纸底色" clip-path="url(#page-clip)">
+    <rect width="1206" height="2622" fill="url(#paper-tone)"/>
+    <rect width="1206" height="2622" fill="url(#paper-light)"/>
+    <rect width="1206" height="2622" fill="#F2EBDD" opacity=".45" filter="url(#paper-grain)"/>
+  </g>
+
+  <g id="construction-field" inkscape:groupmode="layer" inkscape:label="02 · 制图线与网点" clip-path="url(#page-clip)" mask="url(#diagram-mask)" transform="translate(0 100)">
+    <path class="construction" opacity=".26" d="M96 550V1980M1110 550V1980M-120 1334L1320 810M-150 1749L1360 1199M-150 1909L1380 1352"/>
+    <path class="construction" opacity=".2" d="M275 602V1822M952 602V1822M-70 1626L1216 1158"/>
+    <path class="construction" opacity=".44" d="M146 1490C-28 1228 101 847 447 702C794 557 1123 706 1147 994C1174 1315 897 1632 567 1767"/>
+    <path class="construction" opacity=".18" d="M177 1482C25 1233 141 888 461 745C782 602 1088 746 1104 1004"/>
+    <path fill="none" stroke="#D6892F" stroke-width="1.35" stroke-opacity=".42" d="M1103 1051C1085 1356 821 1640 507 1749"/>
+    <path d="M37 865L176 814V1390L37 1440Z" fill="url(#graphite-dots)" opacity=".6"/>
+    <path d="M1034 1182L1195 1123V1720L1034 1779Z" fill="url(#orange-dots)" opacity=".7"/>
+    <path d="M329 1510L668 1387V1785L329 1908Z" fill="url(#graphite-dots)" opacity=".22"/>
+    <g fill="none" stroke="#9F9686" stroke-width="1" opacity=".62">
+      <path d="M89 802H103M96 795V809M945 590H959M952 583V597M1103 1768H1117M1110 1761V1775M268 1863H282M275 1856V1870"/>
+      <circle cx="96" cy="1282" r="5"/><circle cx="1110" cy="969" r="5"/>
+    </g>
+    <g fill="#D88624" opacity=".75"><rect x="949" y="665" width="6" height="6"/><rect x="93" y="1798" width="6" height="6"/></g>
+  </g>
+
+  <g id="hero-shadow" inkscape:groupmode="layer" inkscape:label="03 · 悬浮落影" transform="translate(0 100)">
+    <ellipse cx="606" cy="1836" rx="356" ry="34" fill="#74654D" opacity=".11" filter="url(#soft-shadow)" transform="rotate(-12 606 1836)"/>
+  </g>
+
+  <g id="rear-vellum" inkscape:groupmode="layer" inkscape:label="04 · 后方透明薄片" transform="translate(0 100)">
+    <path d="M355 692L914 489L914 1374L355 1577Z" fill="url(#vellum)" stroke="#CDBD9F" stroke-width="1.3" stroke-opacity=".58"/>
+    <path class="edge-light" d="M356 1575V693L914 490"/>
+    <path class="construction" opacity=".38" d="M385 784L885 602M385 1461L885 1279"/>
+    <path d="M871 597L884 592V637L871 642Z" fill="#F99C1A" opacity=".8"/>
+  </g>
+
+  <!-- Cuboid regenerated from a rigid 3D rotation; see process/slab-geometry.json. -->
+  <g id="connecting-plane" inkscape:groupmode="layer" inkscape:label="05 · 透明长方体（三维投影）" transform="translate(605 1660.022228)" data-yaw-deg="37.761222" data-pitch-deg="28.026762">
+    <!-- X = length, Y = height, Z = width. Eight shared vertices; three front-facing planes. -->
+    <path id="slab-left-face" d="M-508 104.896879L-372 187.396927L-372 215.396927L-508 132.896879Z" fill="#EDCB95" fill-opacity="0.42" stroke="#B59564" stroke-opacity=".5" stroke-width="1.05"/>
+    <path id="slab-long-face" d="M-372 187.396927L508 -132.896879L508 -104.896879L-372 215.396927Z" fill="#CB9550" fill-opacity="0.35" stroke="#B59564" stroke-opacity=".5" stroke-width="1.05"/>
+    <path id="slab-top" d="M-508 104.896879L372 -215.396927L508 -132.896879L-372 187.396927Z" fill="#FFF0D1" fill-opacity="0.54" stroke="#B59564" stroke-opacity=".5" stroke-width="1.05"/>
+    <path id="slab-top-light" d="M-372 187.396927L-508 104.896879L372 -215.396927" fill="none" stroke="#FFFBF1" stroke-opacity=".9" stroke-width="1.5"/>
+    <path id="slab-front-rim" d="M-372 187.396927L508 -132.896879" fill="none" stroke="#FFF7E6" stroke-opacity=".75" stroke-width="1.1"/>
+  </g>
+
+  <!-- Original construction: two extruded code brackets, with separate editable faces. -->
+  <g id="code-sculpture" inkscape:groupmode="layer" inkscape:label="06 · 原创立体括号" transform="translate(127 1038) skewY(-20)">
+    <g id="left-bracket" aria-label="炭灰左括号">
+      <path id="left-top-bevel" d="M303 0L380 64L448 130L371 66Z" fill="#929184"/>
+      <path id="left-upper-inside" d="M380 64L133 350L201 416L448 130Z" fill="url(#graphite-edge)"/>
+      <path id="left-lower-edge" d="M380 636L303 700L371 766L448 702Z" fill="#2D3332"/>
+      <path id="left-lower-outside" d="M-72 350L303 700L371 766L-4 416Z" fill="#2D3332"/>
+      <path id="left-front" d="M303 0L380 64L133 350L380 636L303 700L-72 350Z" fill="url(#graphite-front)"/>
+      <path d="M303 0L-72 350L303 700" fill="none" stroke="#62685F" stroke-width="1.1"/>
+      <path d="M133 350L380 636" fill="none" stroke="#959486" stroke-width="1.2"/>
+      <path d="M-48 350L305 25M-48 350L304 674" fill="none" stroke="#F2EBDD" stroke-width=".7" opacity=".18"/>
+    </g>
+    <g id="right-bracket" aria-label="橙色右括号" transform="translate(48 -35)">
+      <path id="right-upper-edge" d="M550 0L925 350L993 416L618 66Z" fill="#FFCB72"/>
+      <path id="right-outer-edge" d="M925 350L550 700L618 766L993 416Z" fill="url(#orange-edge)"/>
+      <path id="right-lower-cap" d="M473 636L550 700L618 766L541 702Z" fill="#C66F0D"/>
+      <path id="right-upper-inside" d="M473 64L720 350L788 416L541 130Z" fill="#F6B451"/>
+      <path id="right-front" d="M550 0L925 350L550 700L473 636L720 350L473 64Z" fill="url(#orange-front)"/>
+      <path class="edge-light" d="M550 0L925 350L550 700"/>
+      <path d="M473 64L720 350L473 636" fill="none" stroke="#B8640B" stroke-width="1.2" opacity=".72"/>
+      <path d="M550 25L902 350L550 675" fill="none" stroke="#FFE6B4" stroke-width=".8" opacity=".42"/>
+    </g>
+  </g>
+
+
+
+  <g id="foreground-sheet" inkscape:groupmode="layer" inkscape:label="07 · 前景薄片与折角" transform="translate(0 100)">
+    <path d="M674 1393L993 1277V1620L674 1736Z" fill="url(#vellum)" stroke="#C6B89E" stroke-width="1" stroke-opacity=".55"/>
+    <path d="M674 1736L993 1620L1060 1667L741 1783Z" fill="#F2D6A4" opacity=".3" stroke="#C6B89E" stroke-width="1" stroke-opacity=".48"/>
+    <path class="edge-light" d="M675 1734V1394L993 1278"/>
+    <path d="M721 1661L947 1579" fill="none" stroke="#A99B81" stroke-width="1" stroke-dasharray="3 8" opacity=".58"/>
+    <path d="M721 1683L799 1655" fill="none" stroke="#F99C1A" stroke-width="3"/>
+  </g>
+
+  <!-- Live glyphs are centered by their visible outline bounds, not their advance boxes.
+       Alimama ShuHeiTi uses 1000 units/em. The 新 foreground and 110% shadow share (603, 1311). -->
+  <g id="recruitment-callout" inkscape:groupmode="layer" inkscape:label="08 · 纳新啦与衬影（可编辑文字）" class="font-cjk" font-size="240" letter-spacing="0" text-anchor="start">
+    <g id="callout-shadows" fill="#424747" aria-hidden="true">
+      <text id="callout-na-shadow" x="486.72" y="1107.6">纳</text>
+      <text id="callout-xin-shadow" x="472.188" y="1404.192" font-size="264">新</text>
+      <text id="callout-la-shadow" x="480.72" y="1684.44">啦</text>
+    </g>
+    <g id="callout-lettering" fill="#F99C1A">
+      <text id="callout-na" x="486.72" y="1133.6">纳</text>
+      <text id="callout-xin" x="484.08" y="1395.72">新</text>
+      <text id="callout-la" x="480.72" y="1658.44">啦</text>
+    </g>
+  </g>
+
+  <!-- Preserve the user's internal typography exactly at 2/3 scale.
+       Align the visible title envelope to x=603 and its top to the 152 px page margin. -->
+  <g id="recruitment-heading" inkscape:groupmode="layer" inkscape:label="09 · 纳新标题（可编辑文字）" transform="translate(201.333333 85.833333) scale(0.6666666667)">
+    <text id="wordmark-1" x="196" y="354" class="font-latin" font-size="96" font-weight="700" letter-spacing="3.3" fill="url(#paper-tone)" stroke="#424747" stroke-width="4" stroke-linejoin="round" paint-order="stroke fill">WEST-2</text>
+    <text id="wordmark-2" x="646" y="174" class="font-latin" font-size="96" font-weight="700" letter-spacing="3.3" fill="url(#paper-tone)" stroke="#424747" stroke-width="4" stroke-linejoin="round" paint-order="stroke fill">ONLINE</text>
+    <text id="studio-name-1" x="179" y="257" class="font-cjk" font-size="198" letter-spacing="3" fill="#F99C1A" stroke="#424747" stroke-width="2" stroke-linejoin="round" paint-order="stroke fill">西二</text>
+    <text id="studio-name-2" x="629" y="337" class="font-cjk" font-size="198" letter-spacing="3" fill="#F99C1A" stroke="#424747" stroke-width="2" stroke-linejoin="round" paint-order="stroke fill">在线</text>
+    <text id="year-1" x="580" y="159" class="font-numeric" font-size="84" font-weight="700" letter-spacing="1.5" fill="#424747">2</text>
+    <text id="year-2" x="580" y="225" class="font-numeric" font-size="84" font-weight="700" letter-spacing="1.5" fill="#424747">0</text>
+    <text id="year-3" x="580" y="295" class="font-numeric" font-size="84" font-weight="700" letter-spacing="1.5" fill="#424747">2</text>
+    <text id="year-4" x="580" y="360" class="font-numeric" font-size="84" font-weight="700" letter-spacing="1.5" fill="#424747">6</text>
+  </g>
+
+  <g id="footer-identity" inkscape:groupmode="layer" inkscape:label="10 · 福uu 与品牌标语" transform="translate(0 76)">
+    <!-- Monochrome vector study of the existing fuu mark; the reference and provenance are recorded in process/. -->
+    <g id="fuu-lockup" transform="translate(487.375 2226)">
+      <g id="fuu-symbol" transform="scale(.07)" fill="none" stroke="#424747" stroke-width="122" stroke-linecap="round">
+        <path d="M283 813C391 732 409 654 409 541V503C409 322 550 207 742 212"/>
+        <path d="M676 513H717"/>
+      </g>
+      <text id="fuu-name" x="82" y="57" class="font-cjk" font-size="59" letter-spacing="1.4" fill="#424747">福<tspan class="font-latin" font-weight="600" letter-spacing="5">uu</tspan></text>
+    </g>
+    <text id="tagline" x="606" y="2390" class="font-cjk" font-size="36" letter-spacing="6" text-anchor="middle" fill="#696C66">我在西二 · 为你在线</text>
+  </g>
+
+  <g id="alignment-guides" inkscape:groupmode="layer" inkscape:label="11 · 中轴与等距留白（默认隐藏）" display="none" fill="none" stroke="#0085AA" stroke-width="1.2">
+    <rect x="96" y="152" width="1014" height="2318"/>
+    <path d="M603 0V2622M0 152H1206M0 1311H1206M0 2470H1206"/>
+    <circle cx="603" cy="1311" r="8"/>
+  </g>
+</svg>

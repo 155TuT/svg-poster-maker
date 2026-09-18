@@ -1,0 +1,28 @@
+{
+  "capturedOn": "2026-09-18",
+  "posterSource": "../../west2online/west2-online-a4.svg",
+  "posterSha256": "9b7813d84c1ae5bd6738ad7163b30106e05e46c57775073cb86f58ed159bfbd0",
+  "posterPreviewSource": "../../west2online/output/png/west2-online-a4.png",
+  "posterPreviewLocal": "references/2026-poster-reference.png",
+  "posterPreviewNote": "当前已有海报 PNG 的 794 x 1123 等比缩图；色彩与字体规范直接读取源 SVG。",
+  "lastYearSource": "../2025-opening.png",
+  "lastYearSha256": "d6c39f2f94abfff86f08f54f49cba14a14f764308b44da39caf0970a062cf9e5",
+  "lastYearDimensions": [1206, 2622],
+  "palette": {
+    "paper": "#F2EBDD",
+    "lightPaper": "#F4EEE4",
+    "orange": "#F99C1A",
+    "deepOrange": "#A94D00",
+    "graphite": "#424747",
+    "warmHighlight": "#FFCC83"
+  },
+  "fontStacks": {
+    "cjk": "\"Alimama ShuHeiTi\", \"阿里妈妈数黑体\", \"Noto Sans CJK SC\", \"Noto Sans SC\", \"Source Han Sans SC\", \"Source Han Sans CN\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+    "latin": "\"Inter\", \"Helvetica Neue\", \"Segoe UI\", Arial, sans-serif",
+    "numeric": "\"IBM Plex Sans\", \"Inter\", \"Segoe UI\", Arial, sans-serif"
+  },
+  "informationGroups": ["西二在线 / 2026 纳新", "福uu", "我在西二 · 为你在线"],
+  "fuuIconReference": "references/fuu-icon-source.png",
+  "fuuIconOriginalLocation": "../../../ppt/Design/images/logo/fuu-icon.png",
+  "fuuTreatment": "轮廓参考后的单色矢量重绘；并非官方提供的矢量文件。"
+}

@@ -1,0 +1,371 @@
+{
+  "source": "2026-opening.svg",
+  "sourceSha256": "b02f66bb6b34c65aed6180086b82546e0ce2bfcfeb61d892cea5ea677cc1ed3c",
+  "comparedWith": "iterations/07-page-centered-typography-superseded.svg",
+  "beforeSha256": "ecb28ce3cee412a7e52275bf1a80261936fd1f17d026cfa509a6ddef3a913cdd",
+  "originalUserSource": "iterations/06-user-typography-before.svg",
+  "canvas": [
+    1206,
+    2622
+  ],
+  "preservedLayers": {
+    "paper": true,
+    "construction-field": true,
+    "hero-shadow": true,
+    "rear-vellum": true,
+    "connecting-plane": true,
+    "code-sculpture": true,
+    "foreground-sheet": true,
+    "recruitment-heading": true,
+    "footer-identity": true
+  },
+  "beforeFontSize": 240,
+  "currentFontSize": 300,
+  "fontScale": 1.25,
+  "bracketRectangle": {
+    "left": 54.25,
+    "top": 784.75,
+    "right": 1168,
+    "bottom": 1669,
+    "width": 1113.75,
+    "height": 884.25,
+    "centerX": 611.125,
+    "centerY": 1226.875
+  },
+  "alignment": {
+    "targetCenter": [
+      611.125,
+      1226.875
+    ],
+    "xinCenter": [
+      611.125,
+      1226.875
+    ],
+    "naBottomToBracketTop": 0,
+    "laTopToBracketBottom": 0
+  },
+  "measuredMargins": {
+    "top": 152,
+    "bottom": 152
+  },
+  "measuredInkGaps": {
+    "naToXin": 306.25,
+    "xinToLa": 306.25
+  },
+  "horizontalCenterErrors": {
+    "callout-na": 0.0,
+    "callout-xin": 0.0,
+    "callout-la": 0.0,
+    "callout-na-shadow": 0.0,
+    "callout-xin-shadow": 0.0,
+    "callout-la-shadow": 0.0
+  },
+  "measuredInk": {
+    "code-sculpture": {
+      "left": 54.25,
+      "top": 784.75,
+      "right": 1168,
+      "bottom": 1669,
+      "width": 1113.75,
+      "height": 884.25,
+      "centerX": 611.125,
+      "centerY": 1226.875
+    },
+    "recruitment-heading": {
+      "left": 325.25,
+      "top": 152,
+      "right": 880.75,
+      "bottom": 326.5,
+      "width": 555.5,
+      "height": 174.5,
+      "centerX": 603,
+      "centerY": 239.25
+    },
+    "footer-identity": {
+      "left": 403.5,
+      "top": 2311.5,
+      "right": 802.5,
+      "bottom": 2470,
+      "width": 399,
+      "height": 158.5,
+      "centerX": 603,
+      "centerY": 2390.75
+    },
+    "fuu-lockup": {
+      "left": 503,
+      "top": 2311.5,
+      "right": 703,
+      "bottom": 2365,
+      "width": 200,
+      "height": 53.5,
+      "centerX": 603,
+      "centerY": 2338.25
+    },
+    "tagline": {
+      "left": 403.5,
+      "top": 2436.5,
+      "right": 802.5,
+      "bottom": 2470,
+      "width": 399,
+      "height": 33.5,
+      "centerX": 603,
+      "centerY": 2453.25
+    },
+    "recruitment-callout": {
+      "left": 457.75,
+      "top": 480.75,
+      "right": 764.5,
+      "bottom": 1975.25,
+      "width": 306.75,
+      "height": 1494.5,
+      "centerX": 611.125,
+      "centerY": 1228
+    },
+    "callout-na": {
+      "left": 475.75,
+      "top": 513.25,
+      "right": 746.5,
+      "bottom": 784.75,
+      "width": 270.75,
+      "height": 271.5,
+      "centerX": 611.125,
+      "centerY": 649
+    },
+    "callout-xin": {
+      "left": 471.75,
+      "top": 1091,
+      "right": 750.5,
+      "bottom": 1362.75,
+      "width": 278.75,
+      "height": 271.75,
+      "centerX": 611.125,
+      "centerY": 1226.875
+    },
+    "callout-la": {
+      "left": 475.25,
+      "top": 1669,
+      "right": 747,
+      "bottom": 1942.75,
+      "width": 271.75,
+      "height": 273.75,
+      "centerX": 611.125,
+      "centerY": 1805.875
+    },
+    "callout-na-shadow": {
+      "left": 475.75,
+      "top": 480.75,
+      "right": 746.5,
+      "bottom": 752.25,
+      "width": 270.75,
+      "height": 271.5,
+      "centerX": 611.125,
+      "centerY": 616.5
+    },
+    "callout-xin-shadow": {
+      "left": 457.75,
+      "top": 1077.25,
+      "right": 764.5,
+      "bottom": 1376.5,
+      "width": 306.75,
+      "height": 299.25,
+      "centerX": 611.125,
+      "centerY": 1226.875
+    },
+    "callout-la-shadow": {
+      "left": 475.25,
+      "top": 1701.5,
+      "right": 747,
+      "bottom": 1975.25,
+      "width": 271.75,
+      "height": 273.75,
+      "centerX": 611.125,
+      "centerY": 1838.375
+    }
+  },
+  "fontOutlineProof": {
+    "fontSha256": "81093861332bc7db1182733240c0b935846a519434ca8139cf7a98270d9fd7b6",
+    "unitsPerEm": 1000,
+    "glyphs": {
+      "callout-na": {
+        "text": "纳",
+        "fontSize": 300.0,
+        "fontBounds": [
+          33,
+          -100,
+          936,
+          805
+        ],
+        "inkBounds": [
+          475.67499999999995,
+          513.25,
+          746.575,
+          784.75
+        ],
+        "center": [
+          611.125,
+          649.0
+        ]
+      },
+      "callout-xin": {
+        "text": "新",
+        "fontSize": 300.0,
+        "fontBounds": [
+          31,
+          -100,
+          960,
+          806
+        ],
+        "inkBounds": [
+          471.77500000000003,
+          1090.9750000000001,
+          750.475,
+          1362.775
+        ],
+        "center": [
+          611.125,
+          1226.875
+        ]
+      },
+      "callout-la": {
+        "text": "啦",
+        "fontSize": 300.0,
+        "fontBounds": [
+          57,
+          -100,
+          962,
+          812
+        ],
+        "inkBounds": [
+          475.375,
+          1669.0,
+          746.875,
+          1942.6
+        ],
+        "center": [
+          611.125,
+          1805.8
+        ]
+      },
+      "callout-na-shadow": {
+        "text": "纳",
+        "fontSize": 300.0,
+        "fontBounds": [
+          33,
+          -100,
+          936,
+          805
+        ],
+        "inkBounds": [
+          475.67499999999995,
+          480.75,
+          746.575,
+          752.25
+        ],
+        "center": [
+          611.125,
+          616.5
+        ]
+      },
+      "callout-xin-shadow": {
+        "text": "新",
+        "fontSize": 330.0,
+        "fontBounds": [
+          31,
+          -100,
+          960,
+          806
+        ],
+        "inkBounds": [
+          457.84000000000003,
+          1077.385,
+          764.4100000000001,
+          1376.365
+        ],
+        "center": [
+          611.125,
+          1226.875
+        ]
+      },
+      "callout-la-shadow": {
+        "text": "啦",
+        "fontSize": 300.0,
+        "fontBounds": [
+          57,
+          -100,
+          962,
+          812
+        ],
+        "inkBounds": [
+          475.375,
+          1701.5,
+          746.875,
+          1975.1
+        ],
+        "center": [
+          611.125,
+          1838.3
+        ]
+      }
+    }
+  },
+  "measurement": {
+    "method": "Chromium at 4x; isolated visible glyph ink including stroke; alpha >= 128; edges in SVG units",
+    "artifacts": [
+      "output/playwright/typography-final-ink.json",
+      "output/playwright/typography-final-alignment.png"
+    ]
+  },
+  "renderChecks": {
+    "layers": 11,
+    "paths": 43,
+    "editableTexts": 16,
+    "images": 0,
+    "errors": [],
+    "warnings": [],
+    "outOfBounds": [],
+    "outputs": [
+      {
+        "file": "output/2026-opening.png",
+        "width": 1206,
+        "height": 2622,
+        "sha256": "a0c76554c081f47e5ae64e2754206fb0858de2cacef88747f37e4980cae7ab80"
+      },
+      {
+        "file": "output/2026-opening-preview.png",
+        "width": 402,
+        "height": 874,
+        "sha256": "9f526fd661ea7e0d5dba67634caed8475ef4693c7e280d76158ab7a999bd9e4c"
+      },
+      {
+        "file": "output/2026-opening-mobile-390x844.png",
+        "width": 390,
+        "height": 844,
+        "sha256": "b72ad997ffbf4f536634dc44c67b23ea708e10df0369009ee9cae32013d303df"
+      },
+      {
+        "file": "output/2026-opening-guides.png",
+        "width": 1206,
+        "height": 2622,
+        "sha256": "d0e9e710d61eaee59fd1984a2147cd349b13610ff18b192b5e7d703fca118f50"
+      },
+      {
+        "file": "output/2026-opening-construction.png",
+        "width": 1206,
+        "height": 2622,
+        "sha256": "665c8834283b6ffb877f35f9a36b82bc6790e5eab96f00ae7241e5ddd0ecd19b"
+      },
+      {
+        "file": "output/reference-comparison.png",
+        "width": 1120,
+        "height": 823,
+        "sha256": "6063372e57d35aed62b079d0f5dceaae6b66278f2d69395718b51e7df1d7501e"
+      },
+      {
+        "file": "output/slab-projection.png",
+        "width": 1206,
+        "height": 720,
+        "sha256": "83a1699390c3c1082258d90d82eb2148d077c8c3ee1caacc0e281f151e61bb8e"
+      }
+    ]
+  }
+}

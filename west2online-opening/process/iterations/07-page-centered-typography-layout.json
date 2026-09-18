@@ -1,0 +1,332 @@
+{
+  "source": "2026-opening.svg",
+  "sourceSha256": "ecb28ce3cee412a7e52275bf1a80261936fd1f17d026cfa509a6ddef3a913cdd",
+  "comparedWith": "iterations/06-user-typography-before.svg",
+  "beforeSha256": "29e6ead942bcdb6fb7aca5e2ed611f89ee668b591642d93696044605eb477370",
+  "canvas": [
+    1206,
+    2622
+  ],
+  "artworkLayersUnchanged": {
+    "paper": true,
+    "construction-field": true,
+    "hero-shadow": true,
+    "rear-vellum": true,
+    "connecting-plane": true,
+    "code-sculpture": true,
+    "foreground-sheet": true
+  },
+  "headingChildTypographyUnchangedIgnoringIds": true,
+  "headingScale": 0.6666666666666666,
+  "beforeMargins": {
+    "top": 99.25,
+    "bottom": 228
+  },
+  "targetMargins": {
+    "top": 152,
+    "bottom": 152
+  },
+  "measuredMargins": {
+    "top": 152,
+    "bottom": 152
+  },
+  "measuredInk": {
+    "recruitment-heading": {
+      "left": 325.25,
+      "top": 152,
+      "right": 880.75,
+      "bottom": 326.5,
+      "width": 555.5,
+      "height": 174.5,
+      "centerX": 603,
+      "centerY": 239.25
+    },
+    "footer-identity": {
+      "left": 403.5,
+      "top": 2311.5,
+      "right": 802.5,
+      "bottom": 2470,
+      "width": 399,
+      "height": 158.5,
+      "centerX": 603,
+      "centerY": 2390.75
+    },
+    "fuu-lockup": {
+      "left": 503,
+      "top": 2311.5,
+      "right": 703,
+      "bottom": 2365,
+      "width": 200,
+      "height": 53.5,
+      "centerX": 603,
+      "centerY": 2338.25
+    },
+    "tagline": {
+      "left": 403.5,
+      "top": 2436.5,
+      "right": 802.5,
+      "bottom": 2470,
+      "width": 399,
+      "height": 33.5,
+      "centerX": 603,
+      "centerY": 2453.25
+    },
+    "recruitment-callout": {
+      "left": 480.5,
+      "top": 914.25,
+      "right": 725.75,
+      "bottom": 1708.5,
+      "width": 245.25,
+      "height": 794.25,
+      "centerX": 603.125,
+      "centerY": 1311.375
+    },
+    "callout-na": {
+      "left": 494.75,
+      "top": 940.25,
+      "right": 711.5,
+      "bottom": 1157.75,
+      "width": 216.75,
+      "height": 217.5,
+      "centerX": 603.125,
+      "centerY": 1049
+    },
+    "callout-xin": {
+      "left": 491.5,
+      "top": 1202.25,
+      "right": 714.5,
+      "bottom": 1419.75,
+      "width": 223,
+      "height": 217.5,
+      "centerX": 603,
+      "centerY": 1311
+    },
+    "callout-la": {
+      "left": 494.25,
+      "top": 1463.5,
+      "right": 711.75,
+      "bottom": 1682.5,
+      "width": 217.5,
+      "height": 219,
+      "centerX": 603,
+      "centerY": 1573
+    },
+    "callout-na-shadow": {
+      "left": 494.75,
+      "top": 914.25,
+      "right": 711.5,
+      "bottom": 1131.75,
+      "width": 216.75,
+      "height": 217.5,
+      "centerX": 603.125,
+      "centerY": 1023
+    },
+    "callout-xin-shadow": {
+      "left": 480.5,
+      "top": 1191.25,
+      "right": 725.75,
+      "bottom": 1430.5,
+      "width": 245.25,
+      "height": 239.25,
+      "centerX": 603.125,
+      "centerY": 1310.875
+    },
+    "callout-la-shadow": {
+      "left": 494.25,
+      "top": 1489.5,
+      "right": 711.75,
+      "bottom": 1708.5,
+      "width": 217.5,
+      "height": 219,
+      "centerX": 603,
+      "centerY": 1599
+    }
+  },
+  "fontOutlineProof": {
+    "fontSha256": "81093861332bc7db1182733240c0b935846a519434ca8139cf7a98270d9fd7b6",
+    "unitsPerEm": 1000,
+    "glyphs": {
+      "callout-na": {
+        "text": "纳",
+        "fontSize": 240.0,
+        "fontBounds": [
+          33,
+          -100,
+          936,
+          805
+        ],
+        "inkBounds": [
+          494.64000000000004,
+          940.3999999999999,
+          711.36,
+          1157.6
+        ],
+        "center": [
+          603.0,
+          1049.0
+        ]
+      },
+      "callout-xin": {
+        "text": "新",
+        "fontSize": 240.0,
+        "fontBounds": [
+          31,
+          -100,
+          960,
+          806
+        ],
+        "inkBounds": [
+          491.52,
+          1202.28,
+          714.48,
+          1419.72
+        ],
+        "center": [
+          603.0,
+          1311.0
+        ]
+      },
+      "callout-la": {
+        "text": "啦",
+        "fontSize": 240.0,
+        "fontBounds": [
+          57,
+          -100,
+          962,
+          812
+        ],
+        "inkBounds": [
+          494.40000000000003,
+          1463.56,
+          711.6,
+          1682.44
+        ],
+        "center": [
+          603.0,
+          1573.0
+        ]
+      },
+      "callout-na-shadow": {
+        "text": "纳",
+        "fontSize": 240.0,
+        "fontBounds": [
+          33,
+          -100,
+          936,
+          805
+        ],
+        "inkBounds": [
+          494.64000000000004,
+          914.3999999999999,
+          711.36,
+          1131.6
+        ],
+        "center": [
+          603.0,
+          1022.9999999999999
+        ]
+      },
+      "callout-xin-shadow": {
+        "text": "新",
+        "fontSize": 264.0,
+        "fontBounds": [
+          31,
+          -100,
+          960,
+          806
+        ],
+        "inkBounds": [
+          480.372,
+          1191.408,
+          725.6279999999999,
+          1430.592
+        ],
+        "center": [
+          603.0,
+          1311.0
+        ]
+      },
+      "callout-la-shadow": {
+        "text": "啦",
+        "fontSize": 240.0,
+        "fontBounds": [
+          57,
+          -100,
+          962,
+          812
+        ],
+        "inkBounds": [
+          494.40000000000003,
+          1489.56,
+          711.6,
+          1708.44
+        ],
+        "center": [
+          603.0,
+          1599.0
+        ]
+      }
+    }
+  },
+  "measurement": {
+    "method": "Chromium at 4x; isolated visible glyph ink including stroke; alpha >= 128; edges in SVG units",
+    "maxHorizontalCenterError": 0.125,
+    "artifacts": [
+      "output/playwright/typography-final-ink.json",
+      "output/playwright/typography-final-alignment.png"
+    ]
+  },
+  "renderChecks": {
+    "layers": 11,
+    "paths": 42,
+    "editableTexts": 16,
+    "images": 0,
+    "errors": [],
+    "warnings": [],
+    "outOfBounds": [],
+    "outputs": [
+      {
+        "file": "output/2026-opening.png",
+        "width": 1206,
+        "height": 2622,
+        "sha256": "70231ea8fcb724382ed7325d257986db48852dca1a230b9d2f51b5b534e2dd41"
+      },
+      {
+        "file": "output/2026-opening-preview.png",
+        "width": 402,
+        "height": 874,
+        "sha256": "84e31c8029a303582d47669d5434e9eafea47f7bb79f95c9d6dec3a854f5b63b"
+      },
+      {
+        "file": "output/2026-opening-mobile-390x844.png",
+        "width": 390,
+        "height": 844,
+        "sha256": "6a82a8c1992cee19120d70b679593a1f5f5bac5499e201841dafaff56f1fd561"
+      },
+      {
+        "file": "output/2026-opening-guides.png",
+        "width": 1206,
+        "height": 2622,
+        "sha256": "f9d9f1c8f0023fb1c33f64c122ad9f35a869453f3cf3c288fd2ef5e0d2477da6"
+      },
+      {
+        "file": "output/2026-opening-construction.png",
+        "width": 1206,
+        "height": 2622,
+        "sha256": "1a37959e27c27a957dc58a797c1bc9af2999a4b03774404907e12f6e7269b12e"
+      },
+      {
+        "file": "output/reference-comparison.png",
+        "width": 1120,
+        "height": 823,
+        "sha256": "f7d56066540eea1c0da0a9ffad6ea13b1fd678e699b3828694587c1e69555c83"
+      },
+      {
+        "file": "output/slab-projection.png",
+        "width": 1206,
+        "height": 720,
+        "sha256": "83a1699390c3c1082258d90d82eb2148d077c8c3ee1caacc0e281f151e61bb8e"
+      }
+    ]
+  }
+}

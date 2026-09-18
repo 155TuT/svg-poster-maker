@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1206" height="720" viewBox="0 0 1206 720">
+  <rect width="1206" height="720" fill="#F2EBDD"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" fill="#424747">
+    <text x="65" y="63" font-size="24" font-weight="700">ORTHOGRAPHIC CUBOID / EIGHT SHARED VERTICES</text>
+    <text x="65" y="103" font-size="18">Yaw 37.761222 deg  /  Pitch 28.026762 deg  /  Screen rise 20 deg</text>
+  </g>
+  <g transform="translate(603 393)">    <path id="slab-left-face" d="M-508 104.896879L-372 187.396927L-372 215.396927L-508 132.896879Z" fill="#EDCB95" fill-opacity="0.42" stroke="#B59564" stroke-opacity=".5" stroke-width="1.05"/>
+    <path id="slab-long-face" d="M-372 187.396927L508 -132.896879L508 -104.896879L-372 215.396927Z" fill="#CB9550" fill-opacity="0.35" stroke="#B59564" stroke-opacity=".5" stroke-width="1.05"/>
+    <path id="slab-top" d="M-508 104.896879L372 -215.396927L508 -132.896879L-372 187.396927Z" fill="#FFF0D1" fill-opacity="0.54" stroke="#B59564" stroke-opacity=".5" stroke-width="1.05"/>    <path id="slab-top-light" d="M-372 187.396927L-508 104.896879L372 -215.396927" fill="none" stroke="#FFFBF1" stroke-opacity=".9" stroke-width="1.5"/>
+    <path id="slab-front-rim" d="M-372 187.396927L508 -132.896879" fill="none" stroke="#FFF7E6" stroke-opacity=".75" stroke-width="1.1"/>
+    <g fill="#424747" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15"><circle cx="-508" cy="104.896879" r="3" fill="#A94D00"/><text x="-500" y="96.896879">A</text><circle cx="372" cy="-215.396927" r="3" fill="#A94D00"/><text x="380" y="-223.396927">B</text><circle cx="508" cy="-132.896879" r="3" fill="#A94D00"/><text x="516" y="-140.896879">C</text><circle cx="-372" cy="187.396927" r="3" fill="#A94D00"/><text x="-364" y="179.396927">D</text><circle cx="-372" cy="215.396927" r="3" fill="#A94D00"/><text x="-364" y="207.396927">H</text><circle cx="508" cy="-104.896879" r="3" fill="#A94D00"/><text x="516" y="-112.896879">G</text></g>
+  </g>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" fill="#666A68">
+    <text x="65" y="654">Top / near long face / left end face. One tone per plane; no centre highlight or hidden face overlay.</text>
+    <text x="65" y="686">Screen centre and projected dimensions preserved. Translation remains independent of rotation.</text>
+  </g>
+</svg>

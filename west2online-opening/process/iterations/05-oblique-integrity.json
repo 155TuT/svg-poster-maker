@@ -1,0 +1,25 @@
+{
+  "comparedWith": "iterations/02-balanced-brackets.svg",
+  "preservedGroups": {
+    "rear-vellum": true,
+    "right-bracket": true,
+    "left-bracket": true,
+    "recruitment-heading": true,
+    "foreground-sheet": true,
+    "footer-identity": true
+  },
+  "bracketProjection": "translate(127 1038) skewY(-20)",
+  "slabProjection": "translate(127 1038) skewY(-20)",
+  "sameProjection": true,
+  "bracketDepth": [
+    68,
+    66
+  ],
+  "slabDepth": [
+    136,
+    132
+  ],
+  "depthDirectionParallel": true,
+  "posterHash": "9B7813D84C1AE5BD6738AD7163B30106E05E46C57775073CB86F58ED159BFBD0",
+  "referenceHash": "D6C39F2F94ABFFF86F08F54F49CBA14A14F764308B44DA39CAF0970A062CF9E5"
+}
