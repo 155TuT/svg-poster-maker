@@ -1,0 +1,6 @@
+/* 徽标面的视觉样式；位置与尺寸在 logo_page.svg 中编辑。 */
+.mainbody-underlay {
+  fill: #fffdf7;
+  /* 0 为完全透明，1 为完全不透明；只影响垫层，不影响主体。 */
+  fill-opacity: 0.76;
+}

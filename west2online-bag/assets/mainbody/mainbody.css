@@ -1,0 +1,54 @@
+/* VISUAL STYLES ONLY. Copy and geometry live in mainbody.svg.
+   The exporter embeds this stylesheet into output/mainbody.svg.
+   The original logo is referenced as a separate asset; there is no background. */
+
+.letter-fragment {
+  fill: #282925;
+  stroke: none;
+}
+
+.letter-fragment.accent { fill: #F99C1A; }
+
+/* Added only in the final PNG branch, underneath e / s / t / o / n / l / i.
+   The normal SVG and preview contain no completion layer. */
+.halftone-completion {
+  fill: #282925;
+  stroke: none;
+  opacity: 0.065;
+}
+
+.grid-frame,
+.cell-divider,
+.writing-rule,
+.split-rule,
+.extra-guide,
+.registration {
+  fill: none;
+  stroke: #77796e;
+  stroke-width: 0.7;
+}
+
+.grid-frame { stroke-opacity: 0.7; }
+.cell-divider { stroke-opacity: 0.46; }
+.writing-rule { stroke-opacity: 0.48; }
+.writing-rule.baseline { stroke-opacity: 0.66; }
+.writing-rule.x-height { stroke-dasharray: 1.1 2.3; }
+.split-rule { stroke-opacity: 0.66; stroke-width: 0.8; }
+.extra-guide { stroke-opacity: 0.4; stroke-dasharray: 2 2.5; }
+.registration { stroke-opacity: 0.8; }
+
+.annotation,
+.microcopy,
+.caption {
+  fill: #474940;
+  font-family: "DejaVu Sans Mono", "Cascadia Mono", Consolas, monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-kerning: none;
+}
+
+.annotation { font-size: 8px; }
+.microcopy { font-size: 10px; letter-spacing: -0.15px; }
+.caption { font-size: 9px; letter-spacing: 0.4px; }
+.align-end { text-anchor: end; }
+.align-center { text-anchor: middle; }

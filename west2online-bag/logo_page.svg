@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="styles/logo_page.css"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1149" height="1369" viewBox="0 0 1149 1369"
+     role="img" aria-labelledby="page-title page-description">
+  <title id="page-title">West2 Online · 袋子徽标面</title>
+  <desc id="page-description">罗马建筑波点背景，居中的半透明暖白底层与 West2 Online 主体。</desc>
+
+  <!-- 画布沿用背景原始比例；替换背景时在这里修改引用。 -->
+  <g id="background-layer">
+    <image id="background-art"
+           x="0" y="0" width="1149" height="1369"
+           preserveAspectRatio="xMidYMid meet"
+           href="assets/bg/output/image-halftone.png" />
+  </g>
+
+  <!--
+    主体原始坐标：1008 × 1424；中心：504, 712。
+    先对齐原点，再缩放 0.64，最后移动到画布中心 574.5, 684.5。
+    底层与主体一起变换，显示尺寸均为 645.12 × 911.36。
+    调整 scale 即可改变整体大小；前一个 translate 控制整体位置。
+  -->
+  <g id="mainbody-placement"
+     transform="translate(574.5 684.5) scale(0.64) translate(-504 -712)">
+    <!-- 底层的颜色、透明度在 styles/logo_page.css 中修改。 -->
+    <rect id="mainbody-underlay" class="mainbody-underlay"
+          x="0" y="0" width="1008" height="1424" />
+
+    <!-- 使用已完成波点处理的主体成品；这里仅拼装，不再处理波点。 -->
+    <image id="mainbody-art"
+           x="0" y="0" width="1008" height="1424"
+           preserveAspectRatio="xMidYMid meet"
+           href="assets/mainbody/output/mainbody.png" />
+  </g>
+</svg>

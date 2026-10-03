@@ -1,0 +1,12 @@
+{
+  "name": "west2online-bag",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node logo_page.mjs",
+    "render": "node logo_page.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.3"
+  }
+}

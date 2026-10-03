@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="mainbody.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1008" height="1424" viewBox="0 0 1008 1424"
+     role="img" aria-labelledby="artwork-title artwork-description">
+  <title id="artwork-title">West2online — four-line type grid</title>
+  <desc id="artwork-description">Transparent 4 by 4 grid with eleven monospace characters. Uppercase W and orange 2 are complete; n and lowercase o show their upper half; e is cut vertically, and t is cut through its stem center. Every cell has four handwriting rules. Small copy remains editable. The original West2 Online logo occupies the bottom-right cell.</desc>
+
+  <!-- STYLES: edit mainbody.css. Export embeds it; source stays compact. -->
+  <!-- GEOMETRY: one named group per cell; the supplied logo is a separate asset. -->
+  <defs>
+    <clipPath id="cell-safe-area" clipPathUnits="userSpaceOnUse">
+      <rect x="12" y="12" width="216" height="320"/>
+    </clipPath>
+    <!-- Cropped characters have ONE rectangular reveal; W and 2 have no fragment clip. -->
+    <clipPath id="visible-cell-2" clipPathUnits="userSpaceOnUse">
+      <rect x="120.586" y="0" width="119.414" height="344"/>
+    </clipPath>
+    <clipPath id="visible-cell-3" clipPathUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="206.826"/>
+    </clipPath>
+    <clipPath id="visible-cell-4" clipPathUnits="userSpaceOnUse">
+      <rect x="116.411" y="0" width="123.589" height="344"/>
+    </clipPath>
+    <clipPath id="visible-cell-7" clipPathUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="178.115"/>
+    </clipPath>
+    <clipPath id="visible-cell-9" clipPathUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="175.991"/>
+    </clipPath>
+    <clipPath id="visible-cell-10" clipPathUnits="userSpaceOnUse">
+      <rect x="0" y="108.047" width="240" height="235.953"/>
+    </clipPath>
+    <clipPath id="visible-cell-12" clipPathUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="178.701"/>
+    </clipPath>
+    <clipPath id="visible-cell-13" clipPathUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="175.991"/>
+    </clipPath>
+    <clipPath id="visible-cell-15" clipPathUnits="userSpaceOnUse">
+      <rect x="120.586" y="0" width="119.414" height="344"/>
+    </clipPath>
+
+    <!-- GLYPHS: one outline per unique character; each cell references it once. -->
+    <!-- W: native outline from DejaVu Sans Mono Bold, 2048 units/em. -->
+    <path id="glyph-W" d="M0 1493H258L365 397L494 1106H739L889 397L973 1493H1233L1061 0H786L616 784L457 0H184Z"/>
+    <!-- e: native outline from DejaVu Sans Mono Bold, 2048 units/em. -->
+    <path id="glyph-e" d="M1102 55Q1000 13 894 -8Q788 -29 670 -29Q389 -29 240.5 121.5Q92 272 92 555Q92 829 235 988Q378 1147 625 1147Q874 1147 1011.5 999.5Q1149 852 1149 584L1149 465L390 465Q391 333 468 268Q545 203 698 203Q799 203 897 232Q995 261 1102 324ZM854 685Q852 801 794.5 860.5Q737 920 625 920Q524 920 464 858.5Q404 797 393 684Z"/>
+    <!-- s: native outline from DejaVu Sans Mono Bold, 2048 units/em. -->
+    <path id="glyph-s" d="M991 1085L991 829Q910 881 822.5 907.5Q735 934 647 934Q549 934 499 905.5Q449 877 449 821Q449 741 663 691L674 688L758 668Q918 630 992.5 545.5Q1067 461 1067 317Q1067 144 953.5 57.5Q840 -29 612 -29Q511 -29 405 -11.5Q299 6 190 41L190 297Q287 242 387.5 213Q488 184 582 184Q685 184 738 214Q791 244 791 301Q791 357 753.5 387Q716 417 575 451L494 469Q326 507 249 588Q172 669 172 805Q172 967 289 1057Q406 1147 618 1147Q713 1147 807.5 1131.5Q902 1116 991 1085Z"/>
+    <!-- t: native outline from DejaVu Sans Mono Bold, 2048 units/em. -->
+    <path id="glyph-t" d="M690 1438L690 1120L1073 1120L1073 895L690 895L690 365Q690 290 726.5 257.5Q763 225 848 225L1073 225L1073 0L827 0Q575 0 486 80.5Q397 161 397 379L397 895L111 895L111 1120L397 1120L397 1438Z"/>
+    <!-- 2: native outline from DejaVu Sans Mono Bold, 2048 units/em. -->
+    <path id="glyph-2" d="M434 260L1063 260L1063 0L115 0L115 252L275 422Q560 725 621 795Q696 881 729 947.5Q762 1014 762 1079Q762 1179 701.5 1233.5Q641 1288 530 1288Q451 1288 352.5 1256.5Q254 1225 147 1165L147 1440Q254 1479 356.5 1499.5Q459 1520 553 1520Q790 1520 925.5 1409.5Q1061 1299 1061 1108Q1061 1020 1031.5 943Q1002 866 930 772Q877 704 639 466Q510 337 434 260Z"/>
+    <!-- o: native outline from DejaVu Sans Mono Bold, 2048 units/em. -->
+    <path id="glyph-o" d="M616 909Q511 909 451 816.5Q391 724 391 559Q391 394 451 301.5Q511 209 616 209Q722 209 782 301.5Q842 394 842 559Q842 724 782 816.5Q722 909 616 909ZM98 559Q98 830 238.5 988.5Q379 1147 616 1147Q854 1147 994.5 988.5Q1135 830 1135 559Q1135 288 994.5 129.5Q854 -29 616 -29Q379 -29 238.5 129.5Q98 288 98 559Z"/>
+    <!-- n: native outline from DejaVu Sans Mono Bold, 2048 units/em. -->
+    <path id="glyph-n" d="M1071 727L1071 0L780 0L780 682Q780 804 745.5 856.5Q711 909 633 909Q554 909 508.5 838Q463 767 463 641L463 0L172 0L172 1120L463 1120L463 952Q494 1045 569 1096Q644 1147 750 1147Q909 1147 990 1041.5Q1071 936 1071 727Z"/>
+    <!-- l: native outline from DejaVu Sans Mono Bold, 2048 units/em. -->
+    <path id="glyph-l" d="M387 467L387 1331L90 1331L90 1556L680 1556L680 467Q680 335 721 280Q762 225 860 225L1094 225L1094 0L778 0Q569 0 478 108Q387 216 387 467Z"/>
+    <!-- i: native outline from DejaVu Sans Mono Bold, 2048 units/em. -->
+    <path id="glyph-i" d="M221 1120L801 1120L801 225L1165 225L1165 0L143 0L143 225L508 225L508 895L221 895ZM508 1665L801 1665L801 1323L508 1323Z"/>
+  </defs>
+
+  <!-- CONTENT: row-major reading order spells West2online. -->
+  <g id="cells">
+    <!-- Row 1, column 1: letter W. -->
+    <g id="cell-r1-c1" transform="translate(24 24)" data-row="1" data-column="1">
+      <title>W</title>
+      <!-- Complete glyph; no fragment clip or cutting rule. -->
+      <g id="letter-1-W" data-character="W" data-font="DejaVu Sans Mono Bold" data-advance="180.615" data-keep="all" data-fraction="1" clip-path="url(#cell-safe-area)">
+        <g class="letter-fragment">
+          <use href="#glyph-W" xlink:href="#glyph-W" transform="translate(29.692 260) scale(0.146484375 -0.146484375)"/>
+        </g>
+      </g>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r1-c1-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r1-c1-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r1-c1-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r1-c1-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <g id="cell-r1-c1-annotations" class="annotation">
+        <text x="236" y="29" class="align-end">760</text>
+        <text x="236" y="93" class="align-end">547</text>
+        <text x="236" y="257" class="align-end">0</text>
+        <text x="236" y="327" class="align-end">-236</text>
+      </g>
+    </g>
+
+    <!-- Row 1, column 2: letter e. -->
+    <g id="cell-r1-c2" transform="translate(264 24)" data-row="1" data-column="2">
+      <title>e</title>
+      <!-- Keep right 50%; the other part is absent. -->
+      <g id="letter-2-e" data-character="e" data-font="DejaVu Sans Mono Bold" data-advance="180.615" data-keep="right" data-fraction="0.5" clip-path="url(#cell-safe-area)">
+        <g class="letter-fragment" clip-path="url(#visible-cell-2)">
+          <use href="#glyph-e" xlink:href="#glyph-e" transform="translate(29.692 260) scale(0.146484375 -0.146484375)"/>
+        </g>
+      </g>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r1-c2-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r1-c2-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r1-c2-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r1-c2-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <path class="split-rule" d="M 120.586 0 V 344"/>
+      <g id="cell-r1-c2-annotations" class="annotation">
+        <text x="4" y="29">760</text>
+        <text x="4" y="93">547</text>
+        <text x="4" y="257">0</text>
+        <text x="4" y="327">-236</text>
+      </g>
+    </g>
+
+    <!-- Row 1, column 3: letter s. -->
+    <g id="cell-r1-c3" transform="translate(504 24)" data-row="1" data-column="3">
+      <title>s</title>
+      <!-- Keep top 66.667%; the other part is absent. -->
+      <g id="letter-3-s" data-character="s" data-font="DejaVu Sans Mono Bold" data-advance="180.615" data-keep="top" data-fraction="0.6666666666666666" clip-path="url(#cell-safe-area)">
+        <g class="letter-fragment" clip-path="url(#visible-cell-3)">
+          <use href="#glyph-s" xlink:href="#glyph-s" transform="translate(29.692 260) scale(0.146484375 -0.146484375)"/>
+        </g>
+      </g>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r1-c3-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r1-c3-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r1-c3-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r1-c3-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <path class="split-rule" d="M 0 206.826 H 240"/>
+      <g id="cell-r1-c3-annotations" class="annotation">
+        <text x="236" y="29" class="align-end">760</text>
+        <text x="236" y="93" class="align-end">547</text>
+        <text x="236" y="257" class="align-end">0</text>
+        <text x="236" y="327" class="align-end">-236</text>
+      </g>
+    </g>
+
+    <!-- Row 1, column 4: letter t. -->
+    <g id="cell-r1-c4" transform="translate(744 24)" data-row="1" data-column="4">
+      <title>t</title>
+      <!-- The fixed cut at x=116.411 bisects the stem; only the glyph moves right. -->
+      <g id="letter-4-t" data-character="t" data-font="DejaVu Sans Mono Bold" data-advance="180.615" data-keep="right" data-fraction="0.5" clip-path="url(#cell-safe-area)">
+        <g class="letter-fragment" clip-path="url(#visible-cell-4)">
+          <use href="#glyph-t" xlink:href="#glyph-t" transform="translate(36.797 260) scale(0.146484375 -0.146484375)"/>
+        </g>
+      </g>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r1-c4-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r1-c4-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r1-c4-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r1-c4-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <path class="split-rule" d="M 116.411 0 V 344"/>
+      <g id="cell-r1-c4-annotations" class="annotation">
+        <text x="4" y="29">760</text>
+        <text x="4" y="93">547</text>
+        <text x="4" y="257">0</text>
+        <text x="4" y="327">-236</text>
+      </g>
+    </g>
+
+    <!-- Row 2, column 1: editable copy / negative space. -->
+    <g id="cell-r2-c1" transform="translate(24 368)" data-row="2" data-column="1">
+      <title>Small copy / negative space</title>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r2-c1-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r2-c1-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r2-c1-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r2-c1-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <g id="cell-r2-c1-annotations" class="annotation">
+        <text x="4" y="29">760</text>
+        <text x="4" y="93">547</text>
+        <text x="4" y="257">0</text>
+        <text x="4" y="327">-236</text>
+      </g>
+      <g id="cell-r2-c1-editable-copy" class="microcopy">
+        <text x="8" y="115">WELCOME TO WEST2 ONLINE</text>
+        <text x="8" y="126">WELCOME TO WEST2 ONLINE</text>
+        <text x="8" y="137">WELCOME TO WEST2 ONLINE</text>
+        <text x="8" y="148">WELCOME TO WEST2 ONLINE</text>
+        <text x="8" y="159">WELCOME TO WEST2 ONLINE</text>
+        <text x="8" y="170">WELCOME TO WEST2 ONLINE</text>
+        <text x="8" y="181">WELCOME TO WEST2 ONLINE</text>
+        <text x="8" y="192">WELCOME TO WEST2 ONLINE</text>
+        <text x="8" y="203">WELCOME TO WEST2 ONLINE</text>
+      </g>
+    </g>
+
+    <!-- Row 2, column 2: letter 2. -->
+    <g id="cell-r2-c2" transform="translate(264 368)" data-row="2" data-column="2">
+      <title>2</title>
+      <!-- Complete glyph; no fragment clip or cutting rule. -->
+      <g id="letter-6-2" data-character="2" data-font="DejaVu Sans Mono Bold" data-advance="180.615" data-keep="all" data-fraction="1" clip-path="url(#cell-safe-area)">
+        <g class="letter-fragment accent">
+          <use href="#glyph-2" xlink:href="#glyph-2" transform="translate(29.692 260) scale(0.146484375 -0.146484375)"/>
+        </g>
+      </g>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r2-c2-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r2-c2-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r2-c2-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r2-c2-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <g id="cell-r2-c2-annotations" class="annotation">
+        <text x="236" y="29" class="align-end">760</text>
+        <text x="236" y="93" class="align-end">547</text>
+        <text x="236" y="257" class="align-end">0</text>
+        <text x="236" y="327" class="align-end">-236</text>
+      </g>
+    </g>
+
+    <!-- Row 2, column 3: letter o. -->
+    <g id="cell-r2-c3" transform="translate(504 368)" data-row="2" data-column="3">
+      <title>o</title>
+      <!-- Keep top 50%; the other part is absent. -->
+      <g id="letter-7-o" data-character="o" data-font="DejaVu Sans Mono Bold" data-advance="180.615" data-keep="top" data-fraction="0.5" clip-path="url(#cell-safe-area)">
+        <g class="letter-fragment" clip-path="url(#visible-cell-7)">
+          <use href="#glyph-o" xlink:href="#glyph-o" transform="translate(29.692 260) scale(0.146484375 -0.146484375)"/>
+        </g>
+      </g>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r2-c3-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r2-c3-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r2-c3-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r2-c3-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <path class="split-rule" d="M 0 178.115 H 240"/>
+      <g id="cell-r2-c3-annotations" class="annotation">
+        <text x="4" y="29">760</text>
+        <text x="4" y="93">547</text>
+        <text x="4" y="257">0</text>
+        <text x="4" y="327">-236</text>
+      </g>
+    </g>
+
+    <!-- Row 2, column 4: editable copy / negative space. -->
+    <g id="cell-r2-c4" transform="translate(744 368)" data-row="2" data-column="4">
+      <title>Small copy / negative space</title>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r2-c4-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r2-c4-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r2-c4-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r2-c4-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <path class="extra-guide" d="M 120 222 H 240 M 180 178 V 260"/>
+      <g id="cell-r2-c4-annotations" class="annotation">
+        <text x="236" y="29" class="align-end">760</text>
+        <text x="236" y="93" class="align-end">547</text>
+        <text x="236" y="257" class="align-end">0</text>
+        <text x="236" y="327" class="align-end">-236</text>
+      </g>
+      <g id="cell-r2-c4-editable-copy" class="microcopy">
+        <text x="8" y="183">EQUAL TO ^EVERYONE^</text>
+      </g>
+    </g>
+
+    <!-- Row 3, column 1: letter n. -->
+    <g id="cell-r3-c1" transform="translate(24 712)" data-row="3" data-column="1">
+      <title>n</title>
+      <!-- Keep top 50%; the other part is absent. -->
+      <g id="letter-9-n" data-character="n" data-font="DejaVu Sans Mono Bold" data-advance="180.615" data-keep="top" data-fraction="0.5" clip-path="url(#cell-safe-area)">
+        <g class="letter-fragment" clip-path="url(#visible-cell-9)">
+          <use href="#glyph-n" xlink:href="#glyph-n" transform="translate(29.692 260) scale(0.146484375 -0.146484375)"/>
+        </g>
+      </g>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r3-c1-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r3-c1-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r3-c1-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r3-c1-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <path class="split-rule" d="M 0 175.991 H 240"/>
+      <g id="cell-r3-c1-annotations" class="annotation">
+        <text x="236" y="29" class="align-end">760</text>
+        <text x="236" y="93" class="align-end">547</text>
+        <text x="236" y="257" class="align-end">0</text>
+        <text x="236" y="327" class="align-end">-236</text>
+      </g>
+    </g>
+
+    <!-- Row 3, column 2: letter l. -->
+    <g id="cell-r3-c2" transform="translate(264 712)" data-row="3" data-column="2">
+      <title>l</title>
+      <!-- Keep bottom 66.667%; the other part is absent. -->
+      <g id="letter-10-l" data-character="l" data-font="DejaVu Sans Mono Bold" data-advance="180.615" data-keep="bottom" data-fraction="0.6666666666666666" clip-path="url(#cell-safe-area)">
+        <g class="letter-fragment" clip-path="url(#visible-cell-10)">
+          <use href="#glyph-l" xlink:href="#glyph-l" transform="translate(29.692 260) scale(0.146484375 -0.146484375)"/>
+        </g>
+      </g>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r3-c2-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r3-c2-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r3-c2-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r3-c2-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <path class="split-rule" d="M 0 108.047 H 240"/>
+      <g id="cell-r3-c2-annotations" class="annotation">
+        <text x="4" y="29">760</text>
+        <text x="4" y="93">547</text>
+        <text x="4" y="257">0</text>
+        <text x="4" y="327">-236</text>
+      </g>
+    </g>
+
+    <!-- Row 3, column 3: editable copy / negative space. -->
+    <g id="cell-r3-c3" transform="translate(504 712)" data-row="3" data-column="3">
+      <title>Small copy / negative space</title>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r3-c3-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r3-c3-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r3-c3-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r3-c3-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <path class="extra-guide" d="M 120 0 V 344"/>
+      <g id="cell-r3-c3-annotations" class="annotation">
+        <text x="236" y="29" class="align-end">760</text>
+        <text x="236" y="93" class="align-end">547</text>
+        <text x="236" y="257" class="align-end">0</text>
+        <text x="236" y="327" class="align-end">-236</text>
+      </g>
+      <g id="cell-r3-c3-editable-copy" class="microcopy">
+        <text x="8" y="183">KEEP COMMUNICATING</text>
+      </g>
+    </g>
+
+    <!-- Row 3, column 4: letter i. -->
+    <g id="cell-r3-c4" transform="translate(744 712)" data-row="3" data-column="4">
+      <title>i</title>
+      <!-- Keep top 66.667%; the other part is absent. -->
+      <g id="letter-12-i" data-character="i" data-font="DejaVu Sans Mono Bold" data-advance="180.615" data-keep="top" data-fraction="0.6666666666666666" clip-path="url(#cell-safe-area)">
+        <g class="letter-fragment" clip-path="url(#visible-cell-12)">
+          <use href="#glyph-i" xlink:href="#glyph-i" transform="translate(29.692 260) scale(0.146484375 -0.146484375)"/>
+        </g>
+      </g>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r3-c4-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r3-c4-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r3-c4-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r3-c4-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <path class="split-rule" d="M 0 178.701 H 240"/>
+      <g id="cell-r3-c4-annotations" class="annotation">
+        <text x="4" y="29">760</text>
+        <text x="4" y="93">547</text>
+        <text x="4" y="257">0</text>
+        <text x="4" y="327">-236</text>
+      </g>
+    </g>
+
+    <!-- Row 4, column 1: letter n. -->
+    <g id="cell-r4-c1" transform="translate(24 1056)" data-row="4" data-column="1">
+      <title>n</title>
+      <!-- Keep top 50%; the other part is absent. -->
+      <g id="letter-13-n" data-character="n" data-font="DejaVu Sans Mono Bold" data-advance="180.615" data-keep="top" data-fraction="0.5" clip-path="url(#cell-safe-area)">
+        <g class="letter-fragment" clip-path="url(#visible-cell-13)">
+          <use href="#glyph-n" xlink:href="#glyph-n" transform="translate(29.692 260) scale(0.146484375 -0.146484375)"/>
+        </g>
+      </g>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r4-c1-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r4-c1-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r4-c1-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r4-c1-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <path class="split-rule" d="M 0 175.991 H 240"/>
+      <path class="extra-guide" d="M 120 222 H 240 M 180 178 V 260"/>
+      <g id="cell-r4-c1-annotations" class="annotation">
+        <text x="4" y="29">760</text>
+        <text x="4" y="93">547</text>
+        <text x="4" y="257">0</text>
+        <text x="4" y="327">-236</text>
+      </g>
+    </g>
+
+    <!-- Row 4, column 2: editable copy / negative space. -->
+    <g id="cell-r4-c2" transform="translate(264 1056)" data-row="4" data-column="2">
+      <title>Small copy / negative space</title>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r4-c2-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r4-c2-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r4-c2-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r4-c2-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <g id="cell-r4-c2-annotations" class="annotation">
+        <text x="236" y="29" class="align-end">760</text>
+        <text x="236" y="93" class="align-end">547</text>
+        <text x="236" y="257" class="align-end">0</text>
+        <text x="236" y="327" class="align-end">-236</text>
+      </g>
+      <g id="cell-r4-c2-editable-copy" class="microcopy">
+        <text x="8" y="183">DO RIGHT THINGS</text>
+      </g>
+    </g>
+
+    <!-- Row 4, column 3: letter e. -->
+    <g id="cell-r4-c3" transform="translate(504 1056)" data-row="4" data-column="3">
+      <title>e</title>
+      <!-- Keep right 50%; the other part is absent. -->
+      <g id="letter-15-e" data-character="e" data-font="DejaVu Sans Mono Bold" data-advance="180.615" data-keep="right" data-fraction="0.5" clip-path="url(#cell-safe-area)">
+        <g class="letter-fragment" clip-path="url(#visible-cell-15)">
+          <use href="#glyph-e" xlink:href="#glyph-e" transform="translate(29.692 260) scale(0.146484375 -0.146484375)"/>
+        </g>
+      </g>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r4-c3-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r4-c3-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r4-c3-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r4-c3-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <path class="split-rule" d="M 120.586 0 V 344"/>
+      <g id="cell-r4-c3-annotations" class="annotation">
+        <text x="4" y="29">760</text>
+        <text x="4" y="93">547</text>
+        <text x="4" y="257">0</text>
+        <text x="4" y="327">-236</text>
+      </g>
+    </g>
+
+    <!-- Row 4, column 4: original logo asset. -->
+    <g id="cell-r4-c4" transform="translate(744 1056)" data-row="4" data-column="4">
+      <title>West2 Online logo</title>
+      <!-- Original asset stays external in the source; export embeds it unchanged. -->
+      <image id="cell-r4-c4-logo" class="logo-asset" x="20" y="72" width="200" height="200" href="../icon/west2-online-logo.svg" preserveAspectRatio="xMidYMid meet"/>
+      <!-- The four handwriting rules are separate, editable paths. -->
+      <g class="four-line-grid">
+        <path id="cell-r4-c4-ascender" class="writing-rule ascender" d="M 0 32 H 240"/>
+        <path id="cell-r4-c4-x-height" class="writing-rule x-height" d="M 0 96 H 240"/>
+        <path id="cell-r4-c4-baseline" class="writing-rule baseline" d="M 0 260 H 240"/>
+        <path id="cell-r4-c4-descender" class="writing-rule descender" d="M 0 330 H 240"/>
+      </g>
+      <g id="cell-r4-c4-annotations" class="annotation">
+        <text x="236" y="29" class="align-end">760</text>
+        <text x="236" y="93" class="align-end">547</text>
+        <text x="236" y="257" class="align-end">0</text>
+        <text x="236" y="327" class="align-end">-236</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- GRID FRAME: cell boundaries are distinct from the four internal rules. -->
+  <g id="grid-frame" transform="translate(24 24)">
+    <rect class="grid-frame" x="0" y="0" width="960" height="1376"/>
+    <path class="cell-divider" d="M 240 0 V 1376 M 480 0 V 1376 M 720 0 V 1376 M 0 344 H 960 M 0 688 H 960 M 0 1032 H 960"/>
+    <path class="registration" d="M -6 0 H 6 M 0 -6 V 6 M 954 0 H 966 M 960 -6 V 6 M -6 1376 H 6 M 0 1370 V 1382 M 954 1376 H 966 M 960 1370 V 1382"/>
+  </g>
+
+  <!-- CAPTIONS: these and every numeric annotation are ordinary editable text. -->
+  <g id="captions" class="caption">
+    <text x="504" y="17" class="align-center">WEST2 ONLINE</text>
+    <text x="24" y="1417">EMBRACE CHANGE</text>
+  <text x="984" y="1417" class="align-end">PURSUE ADVANCEMENT</text>
+  </g>
+</svg>

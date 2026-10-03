@@ -1,0 +1,12 @@
+{
+  "name": "west2online-bag-mainbody",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node mainbody.mjs",
+    "render": "node mainbody.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.3"
+  }
+}
