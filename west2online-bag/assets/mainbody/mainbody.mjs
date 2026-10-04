@@ -80,7 +80,7 @@ async function renderHalftoneLayers(standalone, scale, temporary) {
     sharp(Buffer.from(detailsOnly), { density: 72 * scale }).png().toFile(detailsFile),
   ]);
   const args = [
-    path.resolve(ROOT, '../bg/halftone.cjs'),
+    path.resolve(ROOT, '../logo_page_bg/halftone.cjs'),
     '--input', input,
     '--output', temporary,
     '--mode', 'color',
@@ -94,7 +94,7 @@ async function renderHalftoneLayers(standalone, scale, temporary) {
     '--samples', String(halftone.samples),
     '--seed', String(halftone.seed),
   ];
-  console.log(`Screening display letters only with bg/halftone.cjs; ${completed.count} faint cut-letter completions.`);
+  console.log(`Screening display letters only with logo_page_bg/halftone.cjs; ${completed.count} faint cut-letter completions.`);
   const result = await runFile(process.execPath, args, {
     cwd: ROOT,
     windowsHide: true,

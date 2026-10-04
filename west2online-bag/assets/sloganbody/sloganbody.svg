@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1008" height="1424" viewBox="0 0 1008 1424"
+     role="img" aria-labelledby="sloganbody-title sloganbody-description">
+  <title id="sloganbody-title">West2 Online · 标语主体</title>
+  <desc id="sloganbody-description">顶部“我在西二”，底部“为你在线”，“西二”和“在线”为橙色；上下稿线连通，中间沿垂直中线依次排列 AI、前端、Java、Golang、Unity、设计、安卓，各配一条短稿线。</desc>
+
+  <style><![CDATA[
+    .slogan-character,
+    .group-name {
+      font-family: "Source Han Serif SC", "思源宋体", "Noto Serif SC", serif;
+      font-weight: 900;
+      font-kerning: none;
+      fill: #282925;
+      stroke: none;
+    }
+
+    .slogan-character { font-size: 236px; }
+    .slogan-character.accent { fill: #F99C1A; }
+    .group-name { font-size: 90px; }
+
+    .draft-frame,
+    .draft-divider,
+    .group-rule {
+      fill: none;
+      stroke: #77796e;
+    }
+
+    .draft-frame { stroke-width: 1.2; stroke-opacity: 0.7; }
+    .draft-divider { stroke-width: 1; stroke-opacity: 0.6; }
+    .group-rule { stroke-width: 1; stroke-opacity: 0.6; }
+  ]]></style>
+
+  <!-- 在这里编辑标语内容；背景与半透明遮罩由 slogan_page.svg 拼装。 -->
+  <g id="slogan-content">
+    <!-- 上下四字格共用连续外框与竖向分格线；稿线在文字下方。 -->
+    <g id="slogan-draft-lines" aria-hidden="true">
+      <rect id="content-frame" class="draft-frame"
+            x="24" y="24" width="960" height="1376" />
+      <path id="headline-row-boundaries" class="draft-frame"
+            d="M24 264H984 M24 1160H984" />
+      <path id="continuous-column-guides" class="draft-divider"
+            d="M264 24V1400 M504 24V1400 M744 24V1400" />
+    </g>
+
+    <!-- 思源宋体 Heavy，按实际可见字形居中，同为 236 px；与稿线留有小间隙。 -->
+    <g id="slogan-top" aria-label="我在西二">
+      <text id="top-char-1" class="slogan-character" x="25.5" y="233">我</text>
+      <text id="top-char-2" class="slogan-character" x="267" y="234.5">在</text>
+      <text id="top-char-3" class="slogan-character accent" x="505" y="235.5">西</text>
+      <text id="top-char-4" class="slogan-character accent" x="745.5" y="242">二</text>
+    </g>
+
+    <!--
+      中部 y=264..1160，共 896；7 行各高 128。
+      每行上下留 10，字形到稿线留 8，线宽 1，最大可用字形高度为 99。
+      思源宋体 Heavy 在 90 px 时最高字形为 99；91 px 时为 100，故统一取 90。
+      各组按实际字形中心对齐 x=504，纵向中心间距 128；字形与短稿线整体在每行居中。
+      稿线在字形左右各延长 1 em（90），与该行字形下缘保持 8 的间隙。
+    -->
+    <g id="slogan-middle-content">
+      <g id="group-ai" aria-label="AI">
+        <text class="group-name" x="451.5" y="357.5">AI</text>
+        <path class="group-rule" d="M362 366H646" aria-hidden="true" />
+      </g>
+      <g id="group-frontend" aria-label="前端">
+        <text class="group-name" x="413.5" y="486">前端</text>
+        <path class="group-rule" d="M325.5 503.5H682.5" aria-hidden="true" />
+      </g>
+      <g id="group-java" aria-label="Java">
+        <text class="group-name" x="410" y="606">Java</text>
+        <path class="group-rule" d="M315 629.5H693" aria-hidden="true" />
+      </g>
+      <g id="group-golang" aria-label="Golang">
+        <text class="group-name" x="338" y="733">Golang</text>
+        <path class="group-rule" d="M251 765.5H757" aria-hidden="true" />
+      </g>
+      <g id="group-unity" aria-label="Unity">
+        <text class="group-name" x="373.5" y="860">Unity</text>
+        <path class="group-rule" d="M286.5 893.5H721.5" aria-hidden="true" />
+      </g>
+      <g id="group-design" aria-label="设计">
+        <text class="group-name" x="413.5" y="997.5">设计</text>
+        <path class="group-rule" d="M325.5 1015H682.5" aria-hidden="true" />
+      </g>
+      <g id="group-android" aria-label="安卓">
+        <text class="group-name" x="414" y="1125.5">安卓</text>
+        <path class="group-rule" d="M326 1143H682" aria-hidden="true" />
+      </g>
+    </g>
+
+    <g id="slogan-bottom" aria-label="为你在线">
+      <text id="bottom-char-1" class="slogan-character" x="26.5" y="1369.5">为</text>
+      <text id="bottom-char-2" class="slogan-character" x="266" y="1369.5">你</text>
+      <text id="bottom-char-3" class="slogan-character accent" x="507" y="1370.5">在</text>
+      <text id="bottom-char-4" class="slogan-character accent" x="745.5" y="1369.5">线</text>
+    </g>
+  </g>
+</svg>

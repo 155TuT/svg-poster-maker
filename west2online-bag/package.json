@@ -4,7 +4,11 @@
   "type": "module",
   "scripts": {
     "build": "node logo_page.mjs",
-    "render": "node logo_page.mjs"
+    "render": "node logo_page.mjs",
+    "build:slogan": "node slogan_page.mjs",
+    "render:slogan": "node slogan_page.mjs",
+    "build:bg:logo": "node assets/logo_page_bg/halftone.cjs",
+    "build:bg:slogan": "node assets/slogan_page_bg/halftone.cjs"
   },
   "dependencies": {
     "sharp": "0.35.3"

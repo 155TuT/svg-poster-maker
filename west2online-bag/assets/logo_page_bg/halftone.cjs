@@ -9,7 +9,7 @@ const sharp = require('sharp');
 
 const HELP = `Usage: node halftone.cjs [options]
 
-Defaults: bg/image.png -> bg/output/image-halftone.png
+Defaults: image.png -> output/image-halftone.png beside the entry script
           also exports the complete print as image-halftone-ink.png
 
   --input FILE       Source image (default: image.png beside this script)
@@ -31,10 +31,10 @@ Paths passed as options are relative to the current working directory.
 Default paths are relative to this script, regardless of working directory.
 `;
 
-function optionsFrom(args) {
+function optionsFrom(args, assetDirectory) {
   const options = {
-    input: path.join(__dirname, 'image.png'),
-    output: path.join(__dirname, 'output'),
+    input: path.join(assetDirectory, 'image.png'),
+    output: path.join(assetDirectory, 'output'),
     spacing: null,
     mode: 'color',
     dotScale: 1,
@@ -193,12 +193,12 @@ function makeInkLayer(source, cellColours, width, height, options) {
   return { layer, result };
 }
 
-async function main() {
-  if (process.argv.slice(2).includes('--help')) {
+async function main(args = process.argv.slice(2), assetDirectory = __dirname) {
+  if (args.includes('--help')) {
     process.stdout.write(HELP);
     return;
   }
-  const options = optionsFrom(process.argv.slice(2));
+  const options = optionsFrom(args, assetDirectory);
   const outputImage = path.join(options.output, 'image-halftone.png');
   const outputLayer = path.join(options.output, 'image-halftone-ink.png');
   const realInput = await fs.realpath(options.input);
@@ -236,7 +236,12 @@ async function main() {
   console.log(outputLayer);
 }
 
-main().catch(error => {
-  console.error(`Halftone export failed: ${error.message}`);
-  process.exitCode = 1;
-});
+// Other asset folders reuse this screen with their own default input/output paths.
+module.exports = { main };
+
+if (require.main === module) {
+  main().catch(error => {
+    console.error(`Halftone export failed: ${error.message}`);
+    process.exitCode = 1;
+  });
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="styles/slogan_page.css"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1149" height="1369" viewBox="0 0 1149 1369"
+     role="img" aria-labelledby="page-title page-description">
+  <title id="page-title">West2 Online · 袋子标语面</title>
+  <desc id="page-description">裁后的波点背景与半透明暖白遮罩；顶部“我在西二”、底部“为你在线”，“西二”和“在线”为橙色，上下稿线连通，中间沿中线排列七个组名及短稿线。</desc>
+
+  <!-- 按目标宽高放大铺满画布；读取手工裁好的背景。 -->
+  <g id="background-layer">
+    <image id="background-art"
+           x="0" y="0" width="1149" height="1369"
+           preserveAspectRatio="none"
+           href="assets/slogan_page_bg/output/image-halftone-after-cut.png" />
+  </g>
+
+  <!--
+    与 logo_page.svg 使用相同的局部坐标与变换：1008 × 1424，缩放 0.64。
+    遮罩显示尺寸为 645.12 × 911.36，左上角为 251.94, 228.82。
+    组合中心位于画布中心 574.5, 684.5；内容在 assets/sloganbody 中独立编辑。
+  -->
+  <g id="sloganbody-placement"
+     transform="translate(574.5 684.5) scale(0.64) translate(-504 -712)">
+    <!-- 遮罩的颜色、透明度在 styles/slogan_page.css 中修改。 -->
+    <rect id="sloganbody-underlay" class="sloganbody-underlay"
+          x="0" y="0" width="1008" height="1424" />
+
+    <!-- 独立的标语主体，使用与遮罩相同的 1008 × 1424 局部坐标。 -->
+    <image id="sloganbody-art"
+           x="0" y="0" width="1008" height="1424"
+           preserveAspectRatio="xMidYMid meet"
+           href="assets/sloganbody/sloganbody.svg" />
+  </g>
+</svg>

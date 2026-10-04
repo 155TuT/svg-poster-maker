@@ -1,0 +1,6 @@
+/* 标语面的视觉样式；位置与尺寸在 slogan_page.svg 中编辑。 */
+.sloganbody-underlay {
+  fill: #fffdf7;
+  /* 0 为完全透明，1 为完全不透明；只影响遮罩，不影响后续内容。 */
+  fill-opacity: 0.76;
+}
