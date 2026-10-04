@@ -7,6 +7,8 @@
     "render": "node logo_page.mjs",
     "build:slogan": "node slogan_page.mjs",
     "render:slogan": "node slogan_page.mjs",
+    "build:print": "node print_pages.mjs",
+    "build:all": "npm run build && npm run build:slogan && npm run build:print",
     "build:bg:logo": "node assets/logo_page_bg/halftone.cjs",
     "build:bg:slogan": "node assets/slogan_page_bg/halftone.cjs"
   },

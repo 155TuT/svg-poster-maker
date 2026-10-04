@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="styles/logo_page.css"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="266mm" height="366mm" viewBox="-3 -3 266 366"
+     data-trim-width-mm="260" data-trim-height-mm="360" data-bleed-mm="3"
+     role="img" aria-labelledby="page-title page-description">
+  <title id="page-title">West2 Online · 徽标面 · 260 × 360 mm，四边出血 3 mm</title>
+  <desc id="page-description">以 logo_page_13x18.png 为背景裁切参考，主体与遮罩在成品区域内居中；出血不改变成品取景。</desc>
+
+  <!--
+    单位为 mm。成品框：(0, 0, 260, 360)，含出血画布：(-3, -3, 266, 366)。
+    参考图在原 2298 × 2738 导出图中约从 x=266 起裁去左右余量。
+    保留参考取景中心，精确 13:18 裁框映射回原 1149 × 1369 坐标：
+    x=133.138888889，y=0，width=988.722222222，height=1369。
+    原图按 360/1369 等比映射，左右出血使用原图已有内容。
+    顶部和底部原图无额外高度，仅在成品线外镜像延展 3 mm。
+  -->
+  <g id="background-layer">
+    <image id="background-art"
+           x="-35.010956902849" y="-3.155588020453"
+           width="302.147552958364" height="366.311176040906"
+           preserveAspectRatio="none"
+           data-bleed-source="assets/logo_page_bg/output/image-halftone.png"
+           data-extend-vertical-px="12"
+           href="output/logo_page/260x360mm_origin/logo_page_260x360mm-background-bleed.png" />
+  </g>
+
+  <!-- 保持原稿的主体/背景比例：0.64 × 360/1369；成品中心为 (130, 180)。 -->
+  <g id="mainbody-placement"
+     transform="translate(130 180) scale(0.168298027757487) translate(-504 -712)">
+    <rect id="mainbody-underlay" class="mainbody-underlay"
+          x="0" y="0" width="1008" height="1424" />
+    <image id="mainbody-art"
+           x="0" y="0" width="1008" height="1424"
+           preserveAspectRatio="xMidYMid meet"
+           href="assets/mainbody/output/mainbody.png" />
+  </g>
+</svg>

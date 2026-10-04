@@ -20,4 +20,4 @@
 npm run build:slogan
 ```
 
-页面导出脚本直接读取并内嵌当前的 `sloganbody.svg`，生成 `../../output/slogan_page.svg`、`slogan_page.png` 和 `slogan_page-preview.png`，无需单独导出主体 PNG。
+页面导出脚本直接读取并内嵌当前的 `sloganbody.svg`，在 `../../output/slogan_page/origin/` 中生成 `slogan_page.svg`、`slogan_page.png` 和 `slogan_page-preview.png`，无需单独导出主体 PNG。两种 260 × 360 mm 印刷版由 `npm run build:print` 导出到对应的 `260x360mm_origin/` 和 `260x360mm_ink/` 文件夹。

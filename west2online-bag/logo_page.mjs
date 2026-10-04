@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
-const OUTPUT = path.join(ROOT, 'output');
+const OUTPUT = path.join(ROOT, 'output', 'logo_page', 'origin');
 const SOURCE = path.join(ROOT, 'logo_page.svg');
 const MIME = {
   '.png': 'image/png',
@@ -70,7 +70,7 @@ async function main() {
     sharp(buffer).resize({ width: 800, withoutEnlargement: true }).png()
       .toFile(path.join(OUTPUT, 'logo_page-preview.png')),
   ]);
-  console.log(`Exported output/logo_page.svg, logo_page.png (${png.width} × ${png.height}) and logo_page-preview.png.`);
+  console.log(`Exported output/logo_page/origin/: logo_page.svg, logo_page.png (${png.width} × ${png.height}) and logo_page-preview.png.`);
 }
 
 main().catch(error => {
